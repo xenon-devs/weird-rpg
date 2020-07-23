@@ -1,0 +1,19 @@
+{
+  "name": "anything",
+  "version": "0.1.0",
+  "description": "Story Based Roleplaying Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eniamza/anything.git"
+  },
+  "author": "Weirdos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eniamza/anything/issues"
+  },
+  "homepage": "https://github.com/Eniamza/anything#readme"
+}
