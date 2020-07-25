@@ -53,3 +53,9 @@ function startStory(
   channel.send(`Starting story ${story.name}.`);
   channel.send(story.description);
 }
+
+module.exports = {
+  stories,
+  selectStory,
+  startStory
+}
