@@ -1,0 +1,26 @@
+{
+  "name": "mr-chatur",
+  "description": "Mr. Chatur's monotonic, beautiful, tiring, interesting and boring life.",
+  "questions": [
+    {
+      "question": "What do you want to do?",
+      "options": [
+        {
+          "opt": "Do nothing",
+          "nextSituation": 0
+        },
+        {
+          "opt": "Do everything",
+          "nextSituation": -1
+        }
+      ]
+    }
+  ],
+  "situations": [
+    {
+      "title": "Yet another day in life...",
+      "description": "You are late to office (as usual) and your boss is boiling. .... .... ...",
+      "nextQuestion": 0
+    }
+  ]
+}
