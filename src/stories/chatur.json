@@ -11,7 +11,7 @@
         },
         {
           "opt": "Do everything",
-          "nextSituation": -1
+          "nextSituation": 1
         }
       ]
     }
@@ -21,6 +21,11 @@
       "title": "Yet another day in life...",
       "description": "You are late to office (as usual) and your boss is boiling. .... .... ...",
       "nextQuestion": 0
+    },
+    {
+      "title": "Yet another day in life...",
+      "description": "You are not late to office and your boss is still boiling. Such is life. .... .... ...",
+      "nextQuestion": -1
     }
   ]
 }
