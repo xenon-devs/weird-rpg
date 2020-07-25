@@ -109,7 +109,8 @@ function askQuestion(
     const ansNo = Number(ans.trim().toLowerCase());
 
     if (!isNaN(ansNo)) {
-      if (ansNo <= question.options.length) {
+      ansNo = Math.floor(Math.abs(ansNo));
+      if (ansNo <= question.options.length && ansNo > 0) {
         const nextSituationNo = question.options[ansNo - 1].nextSituation;
         startSituation(client, channel, player, story, nextSituationNo);
       }
