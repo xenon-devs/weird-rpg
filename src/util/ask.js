@@ -1,3 +1,5 @@
+const timeLimit = 20000; // 20s
+
 /**
  * @description Ask a question to a specific discord user and wait for the answer in a specific channel.
  * @param {DiscordClient} client The main discord.js client object.
@@ -16,7 +18,7 @@ function ask(
   channel.send(`<@${askTo.id}> ${question}`);
 
   const notAnsweredHandler = () => {
-    channel.send(`<@${askTo.id}> You didn't answer in 20s, now your chance is gone.`)
+    channel.send(`<@${askTo.id}> You didn't answer in ${timeLimit / 1000}s, now your chance is gone.`)
     client.offMsg(`${question}@${askTo.id}#${channel.id}`);
   }
   let notAnsweredTimeout;
@@ -31,11 +33,11 @@ function ask(
     }
   }
 
-  notAnsweredTimeout = setTimeout(notAnsweredHandler, 20000);
+  notAnsweredTimeout = setTimeout(notAnsweredHandler, timeLimit);
   client.onMsg({
     name: `${question}@${askTo.id}#${channel.id}`,
     handler: msg => finalAnswerHandler(msg, notAnsweredTimeout)
   })
 }
 
-export default ask;
+module.exports = ask;
