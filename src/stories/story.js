@@ -50,7 +50,7 @@ function startStory(
   player,
   story
 ) { 
-  channel.send(`Starting story ${story.name}.`);
+  channel.send(`Starting story **${story.name}**.`);
   channel.send(story.description);
 
   startSituation(client, channel, player, story, 0);
@@ -109,13 +109,13 @@ function askQuestion(
     const ansNo = Number(ans.trim().toLowerCase());
 
     if (!isNaN(ansNo)) {
-      if (question.options.length <= ansNo) {
+      if (ansNo <= question.options.length) {
         const nextSituationNo = question.options[ansNo - 1].nextSituation;
         startSituation(client, channel, player, story, nextSituationNo);
       }
-      else return ask(client, player, channel, `Choices in life are few, and the option you selected doesn't exist.`, answerHandler);
+      else return ask(client, player, channel, `Choices in life are few, and the option you selected doesn't exist. Choose again, wisely.`, answerHandler);
     }
-    else return ask(client, player, channel, `I said number, fool!`, answerHandler);
+    else return ask(client, player, channel, `I said number, fool! Okay, another chance for you.`, answerHandler);
   }
 
   ask(
