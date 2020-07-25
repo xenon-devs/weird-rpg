@@ -9,7 +9,7 @@ const stories = [
 ]
 
 const storyListEmbed = new MessageEmbed()
-  .setTitle(`List of stories`)
+  .setTitle(`List of Stories`)
 
 stories.forEach(story => storyListEmbed.addField(story.name, story.description))
 
@@ -77,7 +77,7 @@ function startSituation(
 ${situation.description}\
 `)
 
-  if (situation.nextQuestion === -1) channel.send(`**THE END**\n Life is short, isn't it?`);
+  if (situation.nextQuestion === -1) channel.send(`**THE END**\nLife is short, isn't it?`);
   else askQuestion(client, channel, player, story, situation.nextQuestion);
 }
 
