@@ -100,7 +100,7 @@ function askQuestion(
   const question = story.questions[questionNo];
 
   question.options.forEach((ques, i) => {
-    optionsString += `${i+1}) ${ques.opt}`;
+    optionsString += `${i+1}) ${ques.opt}\n`;
   })
   
   channel.send(optionsString);
