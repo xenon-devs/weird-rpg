@@ -45,6 +45,7 @@ function selectStory(
  * @param {Story} story 
  */
 function startStory(
+  client,
   channel,
   player,
   story
