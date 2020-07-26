@@ -97,9 +97,7 @@ function askQuestion(
   questionNo
 ) {
   const question = story.questions[questionNo];
-  let optionsString = `__${question.question}__\nTruekallaravailyan konacho no toh kaad mat ho
-[10:46 PM]
-`;
+  let optionsString = `__${question.question}__\n`;
 
   question.options.forEach((ques, i) => {
     optionsString += `${i+1}) ${ques.opt}\n`;
