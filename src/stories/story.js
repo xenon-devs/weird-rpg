@@ -121,8 +121,7 @@ function askQuestion(
     client,
     player,
     channel,
-    `${optionsString}
-(type the option number)`,
+    `${optionsString}(type the option number)`,
     answerHandler
   )
 }
