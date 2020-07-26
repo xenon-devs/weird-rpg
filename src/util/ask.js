@@ -1,4 +1,4 @@
-const timeLimit = 60000; // 20s
+const timeLimit = 60000; // 60s
 
 /**
  * @description Ask a question to a specific discord user and wait for the answer in a specific channel.
