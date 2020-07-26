@@ -96,11 +96,11 @@ function askQuestion(
   story,
   questionNo
 ) {
-  let optionsString = '';
   const question = story.questions[questionNo];
+  let optionsString = `__${question.question}__`;
 
   question.options.forEach((ques, i) => {
-    optionsString += `__${question.question}__\n${i+1}) ${ques.opt}\n`;
+    optionsString += `${i+1}) ${ques.opt}\n`;
   })
   
   channel.send(optionsString);
