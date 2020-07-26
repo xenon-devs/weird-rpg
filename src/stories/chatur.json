@@ -1,25 +1,26 @@
 {
   "name": "mr-chatur",
-  "description": "Mr. Chatur's monotonic, beautiful, tiring, interesting and boring life.",
+  "description": "Mr. Chatur's, an avarage office worker, life was beautiful until...",
   "questions": [
     {
-      "question": "What do you want to do?",
+      "question": "Now...",
       "options": [
         {
-          "opt": "Do nothing",
+          "opt": "ignore boss and take a break to get refreshments",
           "nextSituation": 0
         },
         {
-          "opt": "Do everything",
+          "opt": "Go to his chamber",
           "nextSituation": 1
         }
+        
       ]
     }
   ],
   "situations": [
     {
       "title": "Yet another day in life...",
-      "description": "You are late to office (as usual) and your boss is boiling. .... .... ...",
+      "description": "Wife again insulted for being away most of the time. Which seemed like a staged play. Children barely come close.\n No Surprise. Of course your wife has misguided them to be away.\nThinking about where you made a mistake you didn't sleep.\n As expected you went to office late. Boss called you at once",
       "nextQuestion": 0
     },
     {
