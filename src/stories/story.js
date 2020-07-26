@@ -106,7 +106,7 @@ function askQuestion(
   channel.send(optionsString);
 
   const answerHandler = ans => {
-    const ansNo = Number(ans.trim().toLowerCase());
+    let ansNo = Number(ans.trim().toLowerCase());
 
     if (!isNaN(ansNo)) {
       ansNo = Math.floor(Math.abs(ansNo));
