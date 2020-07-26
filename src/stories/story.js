@@ -102,8 +102,6 @@ function askQuestion(
   question.options.forEach((ques, i) => {
     optionsString += `${i+1}) ${ques.opt}\n`;
   })
-  
-  channel.send(optionsString);
 
   const answerHandler = ans => {
     let ansNo = Number(ans.trim().toLowerCase());
@@ -123,7 +121,7 @@ function askQuestion(
     client,
     player,
     channel,
-    `What do you want to do? (type option number)`,
+    `${optionsString}(type the option number)`,
     answerHandler
   )
 }
