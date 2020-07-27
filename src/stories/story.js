@@ -77,7 +77,7 @@ function startSituation(
 ${situation.description}\
 `)
 
-  if (situation.nextQuestion === -1) channel.send(`**THE END**\nLife can be as simple as weird.\n Expected yet unknown awaits`);
+  if (situation.nextQuestion === -1) channel.send(`**THE END**`);
   else askQuestion(client, channel, player, story, situation.nextQuestion);
 }
 
