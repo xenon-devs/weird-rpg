@@ -16,6 +16,20 @@
         
       ]
     }
+    {
+      "question": "",
+      "options": [
+        {
+          "opt": "ignore boss and take a break to get refreshments",
+          "nextSituation": 1
+        },
+        {
+          "opt": "Go to his chamber",
+          "nextSituation": 2
+        }
+        
+      ]
+    }
   ],
   "situations": [
     {
@@ -25,8 +39,8 @@
     },
     {
       "title": "In lunch break...",
-      "description": "On the way to your favourite restaurant, You receive a message from your Boss.\n> Mr. Chatur, We have a client near eastern city. It's another one week tour for you..\nBest of luck.\nI'll send the details soon..",
-      "nextQuestion": -1
+      "description": "On the way to your favourite restaurant, You receive a message from your Boss.\n> Mr. Chatur, We have a client near eastern city. It's another one week tour for you..\n> Best of luck.\n> I'll send the details soon..\n What? Another in this month? This isn't even your job. While thinking about this..\nyou walk into one of your colleague `Rancho` Who is also one of your best friends... \n```Rancho: Hey, Chatur! How's it going?\nYou: Nothing man! Another tour in this month.\nRancho: Right when your boss and your wife was angry right?\nYou: What are you trying to say?\nRancho: Did some detective work when you were away last time. Here, Photos of your boss's car right outside of your house.\n```\nHe shows you some photos of your house and the Car.",
+      "nextQuestion": 1
     }
   ]
 }
