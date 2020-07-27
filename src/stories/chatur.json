@@ -7,11 +7,11 @@
       "options": [
         {
           "opt": "ignore boss and take a break to get refreshments",
-          "nextSituation": 0
+          "nextSituation": 1
         },
         {
           "opt": "Go to his chamber",
-          "nextSituation": 1
+          "nextSituation": 2
         }
         
       ]
@@ -24,8 +24,8 @@
       "nextQuestion": 0
     },
     {
-      "title": "Yet another day in life...",
-      "description": "You are not late to office and your boss is still boiling. Such is life. .... .... ...",
+      "title": "In lunch break...",
+      "description": "On the way to your favourite restaurant, You receive a message from your Boss.\n> Mr. Chatur, We have a client near eastern city. It's another one week tour for you..\nBest of luck.\nI'll send the details soon..",
       "nextQuestion": -1
     }
   ]
