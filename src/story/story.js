@@ -1,17 +1,7 @@
 const ask = require('../util/ask');
 const { MessageEmbed } = require('discord.js');
 
-// NOTE: -1 in a story is the end of the story
-const mrchatur = require('./chatur.json');
-
-const stories = [
-  mrchatur
-]
-
-const storyListEmbed = new MessageEmbed()
-  .setTitle(`List of Stories`)
-
-stories.forEach(story => storyListEmbed.addField(story.name, story.description))
+const storyList = require('./storyList');
 
 /**
  * 
@@ -24,6 +14,12 @@ function selectStory(
   channel,
   player
 ) {
+  const storyListEmbed = new MessageEmbed() // Embed to display the list of stories 
+  .setTitle(`List of Stories`)
+
+  const stories = storyList(player);
+  stories.forEach(story => storyListEmbed.addField(story.name, story.description))
+
   channel.send(storyListEmbed);
 
   ask(client, player, channel, `Which story do you want to play?`, ans => {
