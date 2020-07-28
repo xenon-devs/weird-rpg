@@ -123,7 +123,6 @@ function askQuestion(
 }
 
 module.exports = {
-  stories,
   selectStory,
   startStory
 }

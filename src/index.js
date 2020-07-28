@@ -2,7 +2,7 @@ const DiscordClient = require('./util/DiscordClient');
 require('dotenv').config();
 
 const { prefix } = require('./config.json');
-const { selectStory } = require('./stories/story');
+const { selectStory } = require('./story/story');
 
 const client = new DiscordClient();
 
