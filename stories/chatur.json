@@ -70,7 +70,7 @@
     {
       "title": "In The chember",
       "description": "```\nBoss: So Mr. Chatur, I am quite upset on your performance..",
-      "nextQuestion": 3
+      "jumpTo": 4
     },
     {
       "title": "Suddenly...",
