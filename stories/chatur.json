@@ -36,11 +36,11 @@
       "options": [
         {
           "opt": "Try to explain what happened",
-          "nextSituation": 2
+          "nextSituation": 4
         },
         {
           "opt": "Do a direct apology",
-          "nextSituation": 2
+          "nextSituation": 4
         }
         
       ]
@@ -70,7 +70,7 @@
     {
       "title": "In The chember",
       "description": "```\nBoss: So Mr. Chatur, I am quite upset on your performance..",
-      "nextQuestion": 2
+      "nextQuestion": 3
     },
     {
       "title": "Suddenly...",
