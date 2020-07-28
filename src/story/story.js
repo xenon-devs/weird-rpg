@@ -73,8 +73,14 @@ function startSituation(
 ${situation.description}\
 `)
 
-  if (situation.jumpTo) { // Optional jump
-    return ask(client, player, channel, `Type anything to continue.`, () => startSituation(jumpTo));
+  if (situation.jumpTo) { // Optional jump to any situation through a continue prompt
+    return ask(
+      client,
+      player,
+      channel,
+      `Type anything to continue.`,
+      () => startSituation(client, channel, player, story, situation.jumpTo)
+    )
   } 
 
   if (situation.nextQuestion === -1) return channel.send(`**THE END**`);
