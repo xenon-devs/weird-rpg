@@ -17,7 +17,7 @@
       ]
     },
     {
-      "question": "",
+      "question": ".",
       "options": [
         {
           "opt": "ignore boss and take a break to get refreshments",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "question": "",
+      "question": ".",
       "options": [
         {
           "opt": "Try to explain what happened",
@@ -70,12 +70,12 @@
       "nextQuestion" : 0
     },
     {
-      "title": "",
+      "title": ".",
       "description": "I have seen enough of you. If you continue like this you will have to **Leave**",
       "jumpTo": 5
     },
     {
-      "title": "",
+      "title": ".",
       "description": "```\nBoss:I am not hearing anything more of your shittalk.\nThis one week tour is your last chance to prove. Pack your things up after lunch and report to me before leaving\nYou:But sir....\nBoss:If you have problems then you are free to go for a picnic\nYou:[Angrily] It's all right sir\nBoss:[With a smile] Thought so\n```",
       "jumpTo": 3
     }
