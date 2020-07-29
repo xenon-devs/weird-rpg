@@ -77,7 +77,7 @@
     {
       "title": "",
       "description": "```\nBoss:I am not hearing anything more of your shittalk.\nThis one week tour is your last chance to prove. Pack your things up after lunch and report to me before leaving\nYou:But sir....\nBoss:If you have problems then you are free to go for a picnic\nYou:[Angrily] It's all right sir\nBoss:[With a smile] Thought so\n```",
-      "nextQuestion" : 3 
+      "jumpTo": 3
     }
   ]
 }
