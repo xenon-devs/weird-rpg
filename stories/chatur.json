@@ -44,6 +44,24 @@
         }
         
       ]
+    },
+    {
+      "question": "Your reaction will be?",
+      "options": [
+        {
+          "opt": "What the.. I knew something was on",
+          "nextSituation": 6
+        },
+        {
+          "opt": "Meh ! Stop bluffing",
+          "nextSituation": 7
+        },
+        {
+          "opt": "I am going to kill this bastard",
+          "nextSituation": 8
+        }
+        
+      ]
     }
     
   ],
@@ -67,7 +85,7 @@
     {
       "title": "Suddenly...",
       "description": " While thinking about this..\nyou walk into one of your colleague `Rancho` Who is also one of your best friends... \n```\nRancho: Hey, Chatur! How's it going?\nYou: Nothing man! Another tour in this month.\nRancho: Right when your boss and your wife was angry right?\nYou: What are you trying to say?\nRancho: Did some detective work when you were away last time. Here, Photos of your boss's car right outside of your house.\n```\nHe shows you some photos of your house and the Car.",
-      "nextQuestion" : -1
+      "nextQuestion" : 3
     },
     {
       "title": ".",
@@ -78,6 +96,21 @@
       "title": ".",
       "description": "```\nBoss:I am not hearing anything more of your shittalk.\nThis one week tour is your last chance to prove. Pack your things up after lunch and report to me before leaving\nYou:But sir....\nBoss:If you have problems then you are free to go for a picnic\nYou:[Angrily] It's all right sir\nBoss:[With a smile] Thought so\n```",
       "jumpTo": 3
+    },
+    {
+      "title": "You knew and I saw",
+      "description": "```\nRancho: I sensed it a long ago when you started doing more business trip\nYou:Didn't mind telling me?\nRancho: If I told you without any evidence you wouldn't believe me then\nYou: [*Breaking down for a second*] What now? Priya is my life.\nRancho: And I have the perfect plan for saving your life.\nA life for Life...\n```",
+      "nextQuestion" : -1
+    },
+    {
+      "title": "Don't believe me?",
+      "description": "```\nRancho: Hard to believe...yes. I know priya was your life\nYou: She is STILL\nRancho: Not much sure of that. Here..[flipping some more pictures] your life right in your bosses arms\nYou: [*Breaking down for a second*] What now? Priya is my life.\nRancho: And I have the perfect plan for saving your life.\nA life for Life...\n```",
+      "nextQuestion" : -1
+    },
+    {
+      "title": "And I have the perfect plan..",
+      "description": "```\nLife For Life\n```",
+      "nextQuestion" : -1
     }
   ]
 }
