@@ -57,7 +57,7 @@
     {
       "title": "In lunch break...",
       "description": "On the way to your favourite restaurant, You receive a message from your Boss.\n> Mr. Chatur, We have a client near eastern city. It's another one week tour for you..\n> Best of luck.\n> I'll send the details soon..\n What? Another in this month? This isn't even your job.",
-      "nextQuestion": 1
+      "jumpTo": 3
     },
     {
       "title": "In The chember",
@@ -66,8 +66,8 @@
     },
     {
       "title": "Suddenly...",
-      "description": " While thinking about this..\nyou walk into one of your colleague `Rancho` Who is also one of your best friends... \n```Rancho: Hey, Chatur! How's it going?\nYou: Nothing man! Another tour in this month.\nRancho: Right when your boss and your wife was angry right?\nYou: What are you trying to say?\nRancho: Did some detective work when you were away last time. Here, Photos of your boss's car right outside of your house.\n```\nHe shows you some photos of your house and the Car.",
-      "nextQuestion" : 0
+      "description": " While thinking about this..\nyou walk into one of your colleague `Rancho` Who is also one of your best friends... \n```\nRancho: Hey, Chatur! How's it going?\nYou: Nothing man! Another tour in this month.\nRancho: Right when your boss and your wife was angry right?\nYou: What are you trying to say?\nRancho: Did some detective work when you were away last time. Here, Photos of your boss's car right outside of your house.\n```\nHe shows you some photos of your house and the Car.",
+      "nextQuestion" : -1
     },
     {
       "title": ".",
