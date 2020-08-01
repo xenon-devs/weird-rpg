@@ -166,16 +166,21 @@
     {
       "title": "Police? Not a chance",
       "description": "```\nRancho: Police won't find any evidence cause any report will just show a simple heart attack.\n```",
-      "nextQuestion" : -1
+      "jumpTo" : 14
     },
     {
       "title": "It's not a sin",
       "description": "```\nRancho: In this way you are just making his illness major. And he'll be killing himself. So it's not a murder either way\nYou: what if I get caught?\nRancho: I have a A grade lawyer friend who'll get you out of any possible charges\n```",
-      "nextQuestion" : -1
+      "jumpTo" : 14
     },
     {
-      "title": "Voila! Now the plan",
-      "description": "```\nThe plan is as easy as cutting an apple\n```",
+      "title": "And Now the plan",
+      "description": "```\nThe plan is as easy as cutting an apple\nWhen you will last report to your boss before leaving, You will tell Raju [A teaboy] to mix the cyanide in coffee.\n```",
+      "jumpTo" : 15
+    },
+    {
+      "title": "After entering the room",
+      "description": "```\nAct as usual.\nRaju will bring the coffee. Wait till boss gets a heart attack. Call ambulance immidiately after that\nDon't worry cyanide will finish him before he gets to hospital\n```",
       "nextQuestion" : -1
     }
   ]
