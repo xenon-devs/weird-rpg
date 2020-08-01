@@ -23,7 +23,7 @@ function selectStory(
   channel.send(storyListEmbed);
 
   ask(client, player, channel, `Which story do you want to play?`, ans => {
-    const storyName = ans.trim().toLowerCase();
+    const storyName = ans.trim();
 
     for (let story of stories) if (story.name === storyName) {
       return startStory(client, channel, player, story);
