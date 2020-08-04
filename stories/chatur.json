@@ -98,6 +98,34 @@
         }
         
       ]
+    },
+    {
+      "question": "Are you a coward?",
+      "options": [
+        {
+          "opt": "No I won't do this,Against my ethics",
+          "nextSituation": 17
+        },
+        {
+          "opt": "Meet you after cleanup",
+          "nextSituation": 16
+        }
+        
+      ]
+    },
+    {
+      "question": "What's going on",
+      "options": [
+        {
+          "opt": "It's all a trick. Stick to the plan",
+          "nextSituation": 18
+        },
+        {
+          "opt": "I can't murder this good man. Maybe it's all misunderstanding",
+          "nextSituation": 18
+        }
+        
+      ]
     }
     
   ],
@@ -180,7 +208,32 @@
     },
     {
       "title": "After entering the room",
-      "description": "```\nAct as usual.\nRaju will bring the coffee. Wait till boss gets a heart attack. Call ambulance immidiately after that\nDon't worry cyanide will finish him before he gets to hospital\n```",
+      "description": "```\nAct as usual.\nRaju will bring the coffee. Wait till boss gets a heart attack. Call ambulance immidiately after that\nDon't worry cyanide will finish him before he gets to hospital\nHere is the Bottle. Pour only 4gm\n```",
+      "nextQuestion" : 6
+    },
+    {
+      "title": "The Good soul",
+      "description": "**In Room**```\nSir: So are you ready?\nYou: [Nervously] Yes sir\nSir: Sorry for scolding earlier today. I was in bad mood.\nYou: [Astonished] It's okay sir.\nSir: I know you need time to spend with your family. But afterall we are all businessmen. I have something for you\nYou: What do you mean sir?\n```\nBoss takes an envelope out of his pocket and pushes it towards you.\n```\nOpen it Mr. Chatur\n```\nYou open the envelope and see that there's two package ticket of Family trip to *Thailand*\n",
+      "nextQuestion" : 7
+    },
+    {
+      "title": "Then wait to see your wife fleeing away",
+      "description": "```\nRancho: I am sure of that.\nYou: What if Raju tells someone?\nRancho: I'll take care of that. He won't open his mouth if his life is in threat\nYou: You're going to murder Raju too?\nRancho: Threat, not Murder\nYou: Are you sure the plan will workout?\nRancho: Sure as fu--\nYou: There's no other way?\nRancho: All other way doesn't have enough time\nYou: Okay let's do this\n```\n *You pick the bottle and leave the place...*",
+      "jumpTo" : 16
+    },
+    {
+      "title": "Death Arrives",
+      "description": "Raju inters with two cup of coffee. As planned, The cup with spoon is for Boss with cyanide mixed. You get a little nervous. While Boss was taking a sip you wanted to stop him from that But..\nYou feel dizzy. Shortly after, Boss gets a heart attack.\n Surprisingly, Police and ambulance arrives even before you made call. *Police wasn't in the plan*\n```\nPolice: [Taking a peek at the cup] Mr Chatur you are under arrest for murdering Mr Virusahastra Buddhe [Boss]\n```\nWhat's happening? This wasn't also in plan.",
+      "jumpTo" : 19
+    },
+    {
+      "title": "Snakes",
+      "description": "Sitting in the backseat of the car, You were watching through the window,\n```\nRaju: I know nothing sir, Mr chatur told me to put cyanide in the coffee, he also threatened me to death of my family.\nPriya: He often assulted me and abused a lot while he was drunk.\nPolice: Don't worry Ms. Priya we will also take note of those.\nRancho: I noticed his frustation. Advised him not to take any foolish steps. But I can't even imagine He would do such miserable act.\nPolice: We are here to take care of his acts. He will either hang or go in jail for a long time\n```",
+      "jumpTo" : 20
+    },
+    {
+      "title": "The root",
+      "description": "While the car was starting, You heard a last conversation\n```\nPriya: Now we can get all the time we want\nRancho: Yeah baby, All the time\n```\nAll the time they want,\n Life is weird isn't it?",
       "nextQuestion" : -1
     }
   ]
