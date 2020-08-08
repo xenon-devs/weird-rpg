@@ -18,7 +18,7 @@ function selectStory(
   .setTitle(`List of Stories`)
 
   const stories = storyList(player);
-  stories.forEach(story => storyListEmbed.addField(story.name, story.description))
+  stories.forEach(story => storyListEmbed.addField(`${story.name} by **${story.author}**`, story.description))
 
   channel.send(storyListEmbed);
 
