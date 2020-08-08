@@ -18,15 +18,15 @@ function selectStory(
   .setTitle(`List of Stories`)
 
   const stories = storyList(player);
-  stories.forEach(story => storyListEmbed.addField(`${story.name} by **${story.author}**`, story.description))
+  stories.forEach((story, i) => storyListEmbed.addField(`${i+1}) ${story.name} by **${story.author}**`, story.description))
 
   channel.send(storyListEmbed);
 
-  ask(client, player, channel, `Which story do you want to play?`, ans => {
-    const storyName = ans.trim().toLowerCase();
+  ask(client, player, channel, `Which story do you want to play? (type the number)`, ans => {
+    const storyId = Number(ans.trim().toLowerCase()) - 1;
 
-    for (let story of stories) if (story.name.trim().toLowerCase() === storyName) {
-      return startStory(client, channel, player, story);
+    if (stories[storyId]) {
+      return startStory(client, channel, player, stories[storyId]);
     }
 
     return channel.send(`Story does not exist.`);
