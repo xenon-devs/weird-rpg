@@ -1,3 +1,5 @@
+**Invite Link** - https://discord.com/api/oauth2/authorize?client_id=725722531918774284&permissions=0&scope=bot
+
 ## What is this? <br>
 Weird life is a recreation of Zork [A CMD based story game] . It contains a library of stories, really a vast one to choose from. <br>
 Writers from different part of the world are contributing to this beautiful project. <br>
