@@ -15,7 +15,7 @@ client.on('message', msg => {
     selectStory(client, msg.channel, msg.author);
   }
   else if (msg.content.trim().toLowerCase() == `${prefix}help`){
-    return channel.send(`Help is coming soon`);
+  channel.send(`Help is coming soon`); 
   }
   
 })
