@@ -15,7 +15,7 @@ client.on('message', msg => {
     selectStory(client, msg.channel, msg.author);
   }
   else if (msg.content.trim().toLowerCase() == `${prefix}help`) {
-    msg.channel.send(`Help is coming soon`); 
+    msg.channel.send(`For Bot support, bug reporting and Story submission Join https://discord.gg/4NZqsUs`); 
   }
 })
   
