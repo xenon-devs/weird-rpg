@@ -16,8 +16,8 @@ client.on('message', msg => {
   }
   else if (msg.content.trim().toLowerCase() == `${prefix}help`) {
     msg.channel.send(`Woah.. We thought it's easy as hell.Yet...
-    `*start` to start the game
-    `*help` to show this message
+    *start to start the game
+    *help to show this message
     For Bot support, bug report and Story submission Join https://discord.gg/4NZqsUs`); 
   }
 })
