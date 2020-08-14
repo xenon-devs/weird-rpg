@@ -1,9 +1,12 @@
-const Discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const DiscordClient = require('./util/DiscordClient');
 require('dotenv').config();
 
-const helpEmbed = new Discord.MessageEmbed()
-.setColor('#0099ff')
+const { prefix } = require('./config.json');
+const { selectStory } = require('./story/story');
+
+const helpEmbed = new MessageEmbed()
+	.setColor('#0099ff')
 	.setTitle('Some title')
 	.setURL('https://discord.js.org/')
 	.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
@@ -19,11 +22,6 @@ const helpEmbed = new Discord.MessageEmbed()
 	.setImage('https://i.imgur.com/wSTFkRM.png')
 	.setTimestamp()
 	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
-
-
-
-const { prefix } = require('./config.json');
-const { selectStory } = require('./story/story');
 
 const client = new DiscordClient();
 
