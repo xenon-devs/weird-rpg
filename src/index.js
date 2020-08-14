@@ -14,11 +14,10 @@ const helpEmbed = new MessageEmbed()
 	.addFields(
     { name: '*start', value: 'Starts the game'},
     { name: '*help', value:'Shows this message'},
+    { name: 'Support Server', value: '[Discord](https://discord.gg/4NZqsUs)', inline: true },
 		
   )
   
-	
-	.setTimestamp()
 	.setFooter('https://discord.gg/4NZqsUs', 'https://imgur.com/BhdNHQr.png')
 
 
