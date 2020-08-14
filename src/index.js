@@ -18,7 +18,7 @@ const helpEmbed = new MessageEmbed()
 		
   )
   
-	.setFooter('By Team Weirdo', 'https://imgur.com/undefined')
+	.setFooter('By Team Weirdo', 'https://imgur.com/n6KfcIa.png')
 
 
 const client = new DiscordClient();
