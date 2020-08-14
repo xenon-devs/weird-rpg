@@ -1,6 +1,26 @@
 const DiscordClient = require('./util/DiscordClient');
 require('dotenv').config();
 
+const helpEmbed = new Discord.MessageEmbed()
+.setColor('#0099ff')
+	.setTitle('Some title')
+	.setURL('https://discord.js.org/')
+	.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+	.setDescription('Some description here')
+	.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+	.addFields(
+		{ name: 'Regular field title', value: 'Some value here' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+	)
+	.addField('Inline field title', 'Some value here', true)
+	.setImage('https://i.imgur.com/wSTFkRM.png')
+	.setTimestamp()
+	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+
+
+
 const { prefix } = require('./config.json');
 const { selectStory } = require('./story/story');
 
@@ -15,10 +35,7 @@ client.on('message', msg => {
     selectStory(client, msg.channel, msg.author);
   }
   else if (msg.content.trim().toLowerCase() == `${prefix}help`) {
-    msg.channel.send(`Woah.. We thought it's easy as hell.Yet...
-    *start to start the game
-    *help to show this message
-    For Bot support, bug report and Story submission Join https://discord.gg/4NZqsUs`); 
+    channel.send(helpEmbed);
   }
 })
   
