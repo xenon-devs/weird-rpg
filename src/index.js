@@ -9,7 +9,7 @@ const helpEmbed = new MessageEmbed()
 	.setColor('#0099ff')
 	.setTitle('Weird Life')
 	.setURL('https://github.com/Eniamza/Weird-Life')
-	.setDescription('Weird life is a recreation of Zork [A CMD based story game] . It contains a library of stories, really a vast one to choose from.Writers from different part of the world are contributing to this beautiful project.')
+	.setDescription('Weird life is a recreation of Zork [A CMD based story game] ')
 	.setThumbnail('https://imgur.com/QCYWXqd.png')
 	.addFields(
     { name: '*start to start the game'},
@@ -19,6 +19,7 @@ const helpEmbed = new MessageEmbed()
 	.setTimestamp()
 	.setFooter('[support server](https://discord.gg/4NZqsUs)', '[github wiki](https://github.com/Eniamza/Weird-Life/wiki)');
 
+  
 const client = new DiscordClient();
 
 client.on('ready', () => {
