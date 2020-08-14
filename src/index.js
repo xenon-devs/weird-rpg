@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const DiscordClient = require('./util/DiscordClient');
 require('dotenv').config();
 
