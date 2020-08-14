@@ -12,8 +12,8 @@ const helpEmbed = new MessageEmbed()
 	.setDescription('Weird life is a recreation of Zork [A CMD based story game] ')
 	.setThumbnail('https://imgur.com/QCYWXqd.png')
 	.addFields(
-    { name: '*start to start the game', value: ''},
-    { name: '*help to to show this message', value:''},
+    { name: '*start', value: 'Starts the game'},
+    { name: '*help', value:'Shows this message'},
 		
   )
   
