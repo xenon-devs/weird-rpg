@@ -7,21 +7,17 @@ const { selectStory } = require('./story/story');
 
 const helpEmbed = new MessageEmbed()
 	.setColor('#0099ff')
-	.setTitle('Some title')
-	.setURL('https://discord.js.org/')
-	.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-	.setDescription('Some description here')
-	.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+	.setTitle('Weird Life')
+	.setURL('https://github.com/Eniamza/Weird-Life')
+	.setDescription('Weird life is a recreation of Zork [A CMD based story game] . It contains a library of stories, really a vast one to choose from.Writers from different part of the world are contributing to this beautiful project.')
+	.setThumbnail('https://imgur.com/QCYWXqd.png')
 	.addFields(
-		{ name: 'Regular field title', value: 'Some value here' },
-		{ name: '\u200B', value: '\u200B' },
-		{ name: 'Inline field title', value: 'Some value here', inline: true },
-		{ name: 'Inline field title', value: 'Some value here', inline: true },
+    { name: '*start to start the game'},
+    { name: '*help to to show this message'},
+		
 	)
-	.addField('Inline field title', 'Some value here', true)
-	.setImage('https://i.imgur.com/wSTFkRM.png')
 	.setTimestamp()
-	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+	.setFooter('[support server](https://discord.gg/4NZqsUs)', '[github wiki](https://github.com/Eniamza/Weird-Life/wiki)');
 
 const client = new DiscordClient();
 
