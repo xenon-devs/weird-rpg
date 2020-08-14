@@ -15,11 +15,13 @@ const helpEmbed = new MessageEmbed()
     { name: '*start to start the game'},
     { name: '*help to to show this message'},
 		
-	)
-	.setTimestamp()
-	.setFooter('[support server](https://discord.gg/4NZqsUs)', '[github wiki](https://github.com/Eniamza/Weird-Life/wiki)');
-
+  )
   
+	
+	.setTimestamp()
+	.setFooter('support server', 'https://discord.gg/4NZqsUs')
+
+
 const client = new DiscordClient();
 
 client.on('ready', () => {
