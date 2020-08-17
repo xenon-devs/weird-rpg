@@ -15,12 +15,12 @@ const helpEmbed = new MessageEmbed()
     { name: '*start', value: 'Starts the game'},
     { name: '*help', value:'Shows this message'},
     { name: 'Support Server', value: '[Discord](https://discord.gg/4NZqsUs)', inline: true },
-		
+		{ name: 'Invite the Bot', value: '[Invite](https://discord.com/api/oauth2/authorize?client_id=725722531918774284&permissions=0&scope=bot)', inline: true },
   )
   
 	.setFooter('By Team Weirdo', 'https://imgur.com/n6KfcIa.png')
 
-
+//https://discord.com/api/oauth2/authorize?client_id=725722531918774284&permissions=0&scope=bot
 const client = new DiscordClient();
 
 client.on('ready', () => {
