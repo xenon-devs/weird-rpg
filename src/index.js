@@ -17,7 +17,7 @@ const helpEmbed = new MessageEmbed()
     { name: 'Support Server', value: '[Discord](https://discord.gg/4NZqsUs)', inline: true },
     { name: 'Vote and Invite', value: '[Top.gg](https://top.gg/bot/725722531918774284)', inline: true },
     { name: 'GitHub', value: '[/Weird-Life](https://github.com/Eniamza/Weird-Life/)', inline: true },
-		{ name: 'Submit Story', value: '[Walkthrouh](https://github.com/Eniamza/Weird-Life/wiki/Getting-Started)', inline: true },
+		{ name: 'Submit Story', value: '[Walkthrough](https://github.com/Eniamza/Weird-Life/wiki/Getting-Started)', inline: true },
   )
 
   .setFooter('By Team Weirdo', 'https://imgur.com/n6KfcIa.png');
