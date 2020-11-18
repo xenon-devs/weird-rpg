@@ -1,6 +1,6 @@
 ### Weird Life
 
-[![Discord Bots](https://top.gg/api/widget/725722531918774284.svg)](https://top.gg/bot/725722531918774284)
+[![Discord Bots](https://top.gg/api/widget/status/725722531918774284.svg)](https://top.gg/bot/725722531918774284) [![Discord Bots](https://top.gg/api/widget/servers/725722531918774284.svg)](https://top.gg/bot/725722531918774284) [![Discord Bots](https://top.gg/api/widget/upvotes/725722531918774284.svg)](https://top.gg/bot/725722531918774284)
 
 
 ## What is this? <br>
