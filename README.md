@@ -1,4 +1,6 @@
-### [Invite Link](https://discord.com/api/oauth2/authorize?client_id=725722531918774284&permissions=0&scope=bot)
+### Weird Life
+
+[![Discord Bots](https://top.gg/api/widget/725722531918774284.svg)](https://top.gg/bot/725722531918774284)
 
 
 ## What is this? <br>
