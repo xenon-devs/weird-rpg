@@ -7,10 +7,10 @@ const { selectStory } = require('./story/story');
 
 const helpEmbed = new MessageEmbed()
 	.setColor('#0099ff')
-	.setTitle('Weird Life')
+	.setTitle('Weird RPG')
 	.setURL('https://github.com/Eniamza/Weird-Life')
-	.setDescription('Weird life is a recreation of Zork [A CMD based story game] ')
-	.setThumbnail('https://imgur.com/QCYWXqd.png')
+	.setDescription('Time to dive back in Text mode and enjoy the weirdest ever RPG game')
+	.setThumbnail('https://imgur.com/dQd2ziB.png')
 	.addFields(
     { name: '*start', value: 'Starts the game'},
     { name: '*help', value:'Shows this message'},
@@ -20,7 +20,7 @@ const helpEmbed = new MessageEmbed()
 		{ name: 'Submit Story', value: '[Walkthrough](https://github.com/Eniamza/Weird-Life/wiki/Getting-Started)', inline: true },
   )
 
-  .setFooter('By Team Weirdo', 'https://imgur.com/n6KfcIa.png');
+  .setFooter('By Team Xen', 'https://imgur.com/gKWB0Xf.png');
 
 
 const client = new DiscordClient();
