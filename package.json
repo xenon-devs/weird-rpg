@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Eniamza/anything.git"
   },
-  "author": "Weirdos",
+  "author": "Team Xenon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Eniamza/anything/issues"
@@ -20,5 +20,6 @@
   "dependencies": {
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0"
-  }
+  },
+  "devDependencies": {}
 }
