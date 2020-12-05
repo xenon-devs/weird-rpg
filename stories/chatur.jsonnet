@@ -14,7 +14,7 @@
           "opt": "Go to his chamber",
           "nextSituation": 2
         }
-        
+
       ]
     },
     {
@@ -28,8 +28,8 @@
           "opt": "Go to his chamber",
           "nextSituation": 2
         }
-    
-        
+
+
       ]
     },
     {
@@ -43,7 +43,7 @@
           "opt": "Do a direct apology",
           "nextSituation": 5
         }
-        
+
       ]
     },
     {
@@ -61,7 +61,7 @@
           "opt": "I am going to kill this bastard",
           "nextSituation": 8
         }
-        
+
       ]
     },
     {
@@ -79,7 +79,7 @@
           "opt": "Go ahead I am listening",
           "nextSituation": 11
         }
-        
+
       ]
     },
     {
@@ -97,7 +97,7 @@
           "opt": "Game is on then",
           "nextSituation": 11
         }
-        
+
       ]
     },
     {
@@ -111,7 +111,7 @@
           "opt": "Meet you after cleanup",
           "nextSituation": 16
         }
-        
+
       ]
     },
     {
@@ -125,10 +125,10 @@
           "opt": "I can't murder this good man. Maybe it's all misunderstanding",
           "nextSituation": 18
         }
-        
+
       ]
     }
-    
+
   ],
 
   "situations": [
