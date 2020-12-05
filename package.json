@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eniamza/anything.git"
+    "url": "git+https://github.com/xenon-devs/weird-rpg.git"
   },
   "author": "Team Xenon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Eniamza/anything/issues"
+    "url": "https://github.com/xenon-devs/weird-rpg/issues"
   },
-  "homepage": "https://github.com/Eniamza/anything#readme",
+  "homepage": "https://github.com/xenon-devs/weird-rpg#readme",
   "dependencies": {
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0"

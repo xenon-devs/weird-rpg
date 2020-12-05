@@ -11,7 +11,7 @@ Writers from different part of the world are contributing to this beautiful proj
 
 Contribution is as easy as hanging on tree with a monkey on your back [Well it's quite easy trust me] <br>
 All you have to do is
-- Head to the [WIKI](https://github.com/Eniamza/Weird-Life/wiki) and familiarize yourself with the structure
+- Head to the [WIKI](https://github.com/xenon-devs/weird-rpg/wiki) and familiarize yourself with the structure
 - Fork the repo
 - Follow the guidelines
 - Submit a pull request
