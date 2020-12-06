@@ -9,7 +9,7 @@ local CHARACTERS = {
 {
   name: CHARACTERS.chatur + ' Tragedy',
   author: 'Eniamza',
-  description: 'Mr. %s, is an average office worker, life was beautiful until...'%CHARACTERS.chatur,
+  description: 'Mr. %s is an average office worker, life was beautiful until...'%CHARACTERS.chatur,
   questions: [
     {
       question: 'Now...',
@@ -131,24 +131,23 @@ local CHARACTERS = {
   situations: [
     {
       title: "Yet another day in life...",
-      description: "
+      description: |||
         Wife insulted you again for being away most of the time, which seemed like a staged play. Children barely come close.
         No Surprise. Of course, your wife has misguided them to be away.
         Thinking about where you made a mistake you didn't sleep.
         As expected you went to the office late. Boss called you at once.
-      ",
+      |||,
       nextQuestion: 0
     },
     {
       title: "During the lunch break...",
-      description: "
+      description: |||
         On the way to your favorite restaurant, you receive a message from your Boss.
         > Mr. %s, We have a client near the eastern city. It's another one week tour for you...
         > Best of luck.
         > I'll send the details soon...
-
         What? Another one this month? This isn't even your job.
-      "%CHARACTERS.chatur,
+      |||%CHARACTERS.chatur,
       jumpTo: 3
     },
     {
@@ -162,7 +161,7 @@ local CHARACTERS = {
     },
     {
       title: "Suddenly...",
-      description: "
+      description: |||
         While thinking about this...
         you walk into one of your colleagues, %(rancho)s, who is also one of your best friends...
         ```
@@ -173,7 +172,7 @@ local CHARACTERS = {
         %(rancho)s: Did some detective work when you were away last time. Here, photos of your boss's car right outside of your house.
         ```
         He shows you some photos of your house and the Car.
-      "%CHARACTERS,
+      |||%CHARACTERS,
       nextQuestion: 3
     },
     {
@@ -183,7 +182,7 @@ local CHARACTERS = {
     },
     {
       title: ".",
-      description: "
+      description: |||
         ```
         Boss: I am not hearing anything more of your shit-talk.
         This one week tour is your last chance to prove.
@@ -193,12 +192,12 @@ local CHARACTERS = {
         You:[Angrily] It's all right sir
         Boss:[With a smile] Thought so
         ```
-      ",
+      |||,
       jumpTo: 3
     },
     {
       title: "You knew and I saw",
-      description: "
+      description: |||
         ```
         %(rancho)s: I sensed it a long ago when you started doing more business trip
         You: Didn't mind telling me?
@@ -207,12 +206,12 @@ local CHARACTERS = {
         %(rancho)s: And I have the perfect plan for saving your life.
         A life for Life...
         ```
-      "%CHARACTERS,
+      |||%CHARACTERS,
       nextQuestion: 4
     },
     {
       title: "Don't believe me?",
-      description: "
+      description: |||
         ```
         %(rancho)s: Hard to believe...yes. I know %(chatur_wife)s was your life
         You: She STILL is.
@@ -221,97 +220,97 @@ local CHARACTERS = {
         %(rancho)s: And I have the perfect plan for saving your life.
         A life for Life...
         ```
-      "%CHARACTERS,
+      |||%CHARACTERS,
       nextQuestion: 4
     },
     {
       title: "And I have the perfect plan..",
-      description: "
+      description: |||
         ```
         Life For Life
         ```
-      ",
+      |||,
       nextQuestion : 4
     },
     {
       title: "Complain, Huh?..",
-      description: "
+      description: |||
         ```
         %(rancho)s: Complaints are useless in these cases. Because %(chatur_wife)s won't take your side as she is also involved in this.
         You: So..? You're telling me to murder and go to jail?
         %(rancho)s: As I said, trust me. I have a perfect plan for getting rid of your problems. You won't get your hands dirty... At least listen
         ```
-      "%CHARACTERS,
+      |||%CHARACTERS,
       jumpTo: 11
     },
     {
       title: "You think?",
-      description: "
+      description: |||
         ```
         %(rancho)s: %(chatur_wife)s won't take your side as she is also involved in this.
         You: So..? You're telling me to murder and go to jail?
         %(rancho)s: As I said, trust me. I have a perfect plan for getting rid of your problems. You won't get your hands dirty... At least listen
         ```
-      "%CHARACTERS,
+      ||| %CHARACTERS,
       jumpTo: 11
     },
     {
       title: "Wise choice",
-      description: "
+      description: |||
         ```
         You know I have been in pharmacy for quite a few years...
         The best thing for killing and make it look like an accident is `Cyanide`
         Offer himself a cup of coffee put 4gm of cyanide. Boss is a heart patient so it would trigger a coronary infarction.
         Voila! Boss will be dead in a blink of an eye suffering from a heart attack. No trace, No evidence
         ```
-      ",
+      |||,
       nextQuestion: 5
     },
     {
       title: "Police? Not a chance",
-      description: "
+      description: |||
         ```
         %(rancho)s: Police won't find any evidence cause any report will just show a simple heart attack.
         ```
-      "%CHARACTERS,
+      |||%CHARACTERS,
       jumpTo: 14
     },
     {
       title: "It's not a sin",
-      description: "
+      description: |||
         ```
         %(rancho)s: In this way you are just making his illness major. And he'll be killing himself. So it's not murdering either way
         You: what if I get caught?
         %(rancho)s: I have an A grade lawyer friend who'll get you out of any possible charges
         ```
-      "%CHARACTERS,
+      |||%CHARACTERS,
       jumpTo: 14
     },
     {
       title: "And Now the plan",
-      description: "
+      description: |||
         ```
         The plan is as easy as cutting an apple
         When you will last report to your boss before leaving, You will tell %(teaboy)s [A teaboy] to mix the cyanide in coffee.
         ```
-      "%CHARACTERS,
+      |||%CHARACTERS,
       jumpTo: 15
     },
     {
       title: "After entering the room",
-      description: "
+      description: |||
         ```
         Act as usual.
         %(teaboy)s will bring the coffee. Wait till the boss gets a heart attack. Call an ambulance immediately after that.
         Don't worry cyanide will finish him before he gets to hospital
         Here is the Bottle. Pour only 4gm
         ```
-      "%CHARACTERS,
+      |||%CHARACTERS,
       nextQuestion: 6
     },
     {
       title: "The Good soul",
-      description: "
+      description: |||
         __In the Room__
         ```
         Sir: So are you ready?
@@ -326,12 +325,12 @@ local CHARACTERS = {
         Open it Mr. %s
         ```
         You open the envelope and see that there's two package ticket for Family trip to *Thailand*
-      "%CHARACTERS.chatur,
+      |||%CHARACTERS.chatur,
       nextQuestion: 7
     },
     {
       title: "Then wait to see your wife fleeing away",
-      description: "
+      description: |||
         ```
         %(rancho)s: I am sure of that.
         You: What if %(teaboy)s tells someone?
@@ -345,12 +344,12 @@ local CHARACTERS = {
         You: Okay let's do this
         ```
         *You pick the bottle and leave the place...*
-      "%CHARACTERS,
+      |||%CHARACTERS,
       jumpTo: 16
     },
     {
       title: "Death Arrives",
-      description: "
+      description: |||
         %(teaboy)s enters with two cups of coffee. As planned, The cup with a spoon is for Boss with cyanide mixed. You get a little nervous. While Boss was taking a sip you wanted to stop him from that But...
         You feel dizzy. Shortly after, Boss gets a heart attack.
         Surprisingly, Police and ambulance arrive even before you made the call. *Police wasn't in the plan*
@@ -358,12 +357,12 @@ local CHARACTERS = {
         Police: [Taking a peek at the cup] Mr. %(chatur)s you are under arrest for murdering Mr. %(boss)s [Boss]
         ```
         What's happening? This wasn't also in the plan.
-      "%CHARACTERS,
+      |||%CHARACTERS,
       jumpTo: 19
     },
     {
       title: "Snakes",
-      description: "
+      description: |||
         Sitting in the backseat of the car, you were watching through the window,
         ```
         %(teaboy)s: I know nothing, sir, Mr. %(chatur)s told me to put cyanide in the coffee, he also threatened me to death of my family.
@@ -372,12 +371,12 @@ local CHARACTERS = {
         %(rancho)s: I noticed his frustration. Advised him not to take any foolish steps. But I can't even imagine He would do such a miserable act.
         Police: We are here to take care of his acts. He will either hang or go in jail for a long time
         ```
-      "%CHARACTERS,
+      |||%CHARACTERS,
       jumpTo: 20
     },
     {
       title: "The root",
-      description: "
+      description: |||
         While the car was starting, you heard a last conversation
         ```
         %(chatur_wife)s: Now we can get all the time we want
@@ -385,7 +384,7 @@ local CHARACTERS = {
         ```
         All the time they want,
         Life is weird isn't it?
-      "%CHARACTERS,
+      |||%CHARACTERS,
       nextQuestion : -1
     }
   ]
