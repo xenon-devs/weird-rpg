@@ -27,7 +27,7 @@ const client = new DiscordClient();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}`);
-	client.user.setActivity('*help weirdly', { type: 'PLAYING' })
+	client.user.setActivity(`${prefix}help weirdly`, { type: 'PLAYING' })
 })
 
 client.on('message', msg => {
