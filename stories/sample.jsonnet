@@ -45,7 +45,7 @@ local name = 'Story Name';
     {
       title: "Situation number 1",
       description: "The situation of story which supports discord related markdown",
-      jumpTo: -1
+      jumpTo: -1 // -1 marks the end or the story.
     }
   ]
 }
