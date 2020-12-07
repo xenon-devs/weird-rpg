@@ -19,7 +19,8 @@ local junctionQuestion(options) = {
 
 local junctionSituation(directions, nextQuestion) = {
   title: "Junction",
-  description: std.join('\n', ["%s" % DIRECTIONS[x], for x in directions])
+  description: std.join('\n', ["%s" % DIRECTIONS[x], for x in directions]),
+  nextQuestion: nextQuestion
 };
 
 {
