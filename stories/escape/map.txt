@@ -1,0 +1,21 @@
+MAP OF THE DUNGEON (SPOILER)
+
+  1 2 3 4 5 6 7 8 9
+1 * * * * * * * * *
+2 * 0   * * . . . . D -> exit
+3 * . . . . . * * *
+4 * . * * . . T * *
+5 * . T * T * * * *
+6 * . . . . D . S *
+7 * . * * * T * * *
+8 * L . . . . . K *
+9 * * * * * * * * *
+
+. = road
+* = wall
+L = locked box
+K = key
+S = scroll
+D = door
+T = trap
+0 = starting point
