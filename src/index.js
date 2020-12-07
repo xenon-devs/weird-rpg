@@ -1,5 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const DiscordClient = require('./util/DiscordClient');
+const { version } = require('../package.json');
 require('dotenv').config();
 
 const { prefix } = require('./config.json');
@@ -19,8 +20,7 @@ const helpEmbed = new MessageEmbed()
     { name: 'GitHub', value: '[/Weird-Life](https://github.com/xenon-devs/weird-rpg)', inline: true },
 		{ name: 'Submit Story', value: '[Walkthrough](https://github.com/xenon-devs/weird-rpg/wiki/Getting-Started)', inline: true },
   )
-
-  .setFooter('By Team Xen', 'https://imgur.com/gKWB0Xf.png');
+  .setFooter(`v${version} | By Team Xen`, 'https://imgur.com/gKWB0Xf.png');
 
 
 const client = new DiscordClient();

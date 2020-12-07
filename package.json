@@ -1,6 +1,6 @@
 {
   "name": "weird-rpg",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Story Based Roleplaying Game",
   "main": "src/index.js",
   "scripts": {
