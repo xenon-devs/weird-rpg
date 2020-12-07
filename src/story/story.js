@@ -16,6 +16,7 @@ class Story {
   /** @type {number} */
   currentQuestionNumber;
   story;
+  storyVariables = {};
 
   constructor(
     client,
@@ -38,21 +39,33 @@ class Story {
 
     this.channel.send(storyListEmbed);
 
-    ask(this.client, this.player, this.channel, `Which story do you want to play? (type the number)`, ans => {
-      const storyId = Number(ans.trim().toLowerCase()) - 1;
+    ask(
+      this.client,
+      this.player,
+      this.channel,
+      `Which story do you want to play? (type the number)`,
+      ans => {
+        const storyId = Number(ans.trim().toLowerCase()) - 1;
 
-      if (stories[storyId]) {
-        this.story = stories[storyId];
-        return this.startStory();
+        if (stories[storyId]) {
+          this.story = stories[storyId];
+          return this.startStory();
+        }
+
+        return this.channel.send(`Story does not exist.`);
       }
-
-      return this.channel.send(`Story does not exist.`);
-    })
+    )
   }
 
   startStory() {
     this.channel.send(`Starting story **${this.story.name}**.`);
     this.channel.send(this.story.description);
+
+    if ('variables' in this.story) {
+      for (let variable in this.story.variables) {
+        this.storyVariables[variable] = this.story.variables[variable];
+      }
+    }
 
     this.startSituation(0);
   }
@@ -68,6 +81,12 @@ class Story {
     this.currentSituationNumber = situtationNumber;
 
     this.channel.send(`**${situation.title}** \n${situation.description}`);
+
+    if (situation.setVariables) {
+      for (let variable in situation.setVariables) {
+        if (this.storyVariables[variable]) this.storyVariables[variable] = situation.setVariables[variable];
+      }
+    }
 
     if (situation.jumpTo) { // Optional jump to any situation through a continue prompt
       return ask(
@@ -105,8 +124,27 @@ class Story {
       if (!isNaN(ansNo)) {
         ansNo = Math.floor(Math.abs(ansNo));
         if (ansNo <= question.options.length && ansNo > 0) {
-          const nextSituationNo = question.options[ansNo - 1].nextSituation;
-          this.startSituation(nextSituationNo);
+          const selectedOption = question.options[ansNo - 1];
+
+          if (selectedOption.setVariables) {
+            for (let variable in selectedOption.setVariables) {
+              if (this.storyVariables[variable]) this.storyVariables[variable] = selectedOption.setVariables[variable];
+            }
+          }
+
+          if (selectedOption.conditionalNext) {
+            for (let conditional of selectedOption.conditionalNext) {
+              let isConditionMet = true;
+
+              for (let variableCondition in conditional.if.variables) {
+                if (this.storyVariables[variableCondition] !== conditional.if.variables[variableCondition]) isConditionMet = false;
+              }
+
+              if (isConditionMet) return this.startSituation(conditional.nextSituation);
+            }
+          }
+
+          return this.startSituation(selectedOption.nextSituation);
         }
         else return ask(this.client, this.player, this.channel, `Choices in life are few, and the option you selected doesn't exist. Choose again, wisely.`, answerHandler);
       }
