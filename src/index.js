@@ -4,7 +4,7 @@ const { version } = require('../package.json');
 require('dotenv').config();
 
 const { prefix } = require('./config.json');
-const { selectStory } = require('./story/story');
+const { Story } = require('./story/story');
 
 const helpEmbed = new MessageEmbed()
 	.setColor('#0099ff')
@@ -32,7 +32,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content.trim().toLowerCase() == `${prefix}start`) {
-    selectStory(client, msg.channel, msg.author);
+    new Story(client, msg.channel, msg.author);
   }
   else if (msg.content.trim().toLowerCase() == `${prefix}help`) {
     msg.channel.send(helpEmbed);
