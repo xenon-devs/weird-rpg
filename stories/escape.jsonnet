@@ -2,12 +2,33 @@ local CHARACTERS = {
   main: "Sammy"
 };
 
+local TILES = import './escape/tiles.jsonnet';
+local DIRECTIONS = import './escape/directions.jsonnet';
+local DIRECTIONS_GO = import './escape/directions-go.jsonnet';
+
+local directionOpt(dir, nextSituation, conditionalNext = []) = {
+  opt: DIRECTIONS_GO[dir],
+  nextSituation: nextSituation,
+  conditionalNext: conditionalNext
+};
+
+local junctionQuestion(options) = {
+  question: "What will you do?",
+  options: options
+};
+
+local junctionSituation(directions, nextQuestion) = {
+  title: "Junction",
+  description: std.join('\n', ["%s" % DIRECTIONS[x], for x in directions])
+};
+
 {
   name: "%s's Escape"%CHARACTERS.main,
   author: "ShadowWarriorPro",
   description: "%s is stuck in a dark dungeon. He has to escape with limited food, a dying lamp and hidden clues with no map."%CHARACTERS.main,
   variables: { // Inventory
-    hasKey: false
+    hasKey: false,
+    hasScroll: false
   },
   situations: [
     {
@@ -25,18 +46,11 @@ local CHARACTERS = {
         You found food and water next to you, but very little. You picked up one of the lamps from its stand, packed the food in your bag, and started exploring
         with (very little) hope to survive. You don't have a map of the place. All corridors look alike and you have no idea which monsters are waiting to eat you up.
       |||,
-      nextQuestion: 0
-    }
+      jumpTo: 2
+    },
+    junctionSituation(['F', 'R'], 0)
   ],
   questions: [
-    {
-      question: 'Not Ready',
-      options: [
-        {
-          opt: 'lol',
-          nextSituation: 0
-        }
-      ]
-    }
+    junctionQuestion([directionOpt('F', 0), directionOpt('R', 0)])
   ]
 }
