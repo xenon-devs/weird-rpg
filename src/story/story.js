@@ -136,8 +136,8 @@ class Story {
             for (let conditional of selectedOption.conditionalNext) {
               let isConditionMet = true;
 
-              for (let variableCondition in conditional.if.variables) {
-                if (this.storyVariables[variableCondition] !== conditional.if.variables[variableCondition]) isConditionMet = false;
+              for (let variableCondition in conditional.condition.variables) {
+                if (this.storyVariables[variableCondition] !== conditional.condition.variables[variableCondition]) isConditionMet = false;
               }
 
               if (isConditionMet) return this.startSituation(conditional.nextSituation);

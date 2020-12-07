@@ -39,7 +39,7 @@ local name = 'Story Name';
           nextSituation: 2,
           conditionalNext: [
             {
-              if: {
+              condition: {
                 variables: {
                   var2: 2
                 }
@@ -47,7 +47,7 @@ local name = 'Story Name';
               nextSituation: 1
             },
             {
-              if: {
+              condition: {
                 variables: {
                   var2: 2
                 }
