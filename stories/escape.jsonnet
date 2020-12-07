@@ -50,8 +50,7 @@ local junctionSituation(directions, nextQuestion) = {
       jumpTo: 2
     },
     junctionSituation(['D', 'R'], 0), // Tile 2x2 (starting tile)
-    junctionSituation(['D'], 1), // Tile 2x3
-    junctionSituation(['D', 'R'], 2), // Tile 3x2
+    junctionSituation(['D'], 1), // Tile 2x4
     junctionSituation(['D', 'R'], 3), // Tile 5x2
     { // Tile 5x3; Trap
       title: "Trap",
@@ -60,9 +59,8 @@ local junctionSituation(directions, nextQuestion) = {
     }
   ],
   questions: [
-    junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting tile)
-    junctionQuestion([directionOpt('D', 1)]), // Tile 2x3;
-    junctionQuestion([directionOpt('D', 5), directionOpt('R', 1)]), // Tile 3x2; Down goes directly to 5x2
-    junctionQuestion([directionOpt('D', 1), directionOpt('R', 6)]) // Tile 5x2; Trap to the right
+    junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting tile); Down goes directly to 5x2
+    junctionQuestion([directionOpt('D', 1)]), // Tile 2x4;
+    junctionQuestion([directionOpt('D', 1), directionOpt('R', 5)]) // Tile 5x2; Trap to the right
   ]
 }
