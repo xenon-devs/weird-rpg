@@ -1,6 +1,6 @@
 {
   L: "There is a passage to the left.",
   R: "There is a passage to the right.",
-  F: "There is a passage infront.",
-  B: "There is a passage behind."
+  U: "There is a passage going up.",
+  D: "There is a passage going down."
 }

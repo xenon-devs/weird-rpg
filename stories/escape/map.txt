@@ -11,6 +11,8 @@ MAP OF THE DUNGEON (SPOILER)
 8 * L . . . . . K *
 9 * * * * * * * * *
 
+NOTE: Tiles will be named XxY where X is the row, Y is the column, eg: 8x2 has the locked box
+
 . = road
 * = wall
 L = locked box
