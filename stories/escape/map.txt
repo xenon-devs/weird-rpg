@@ -2,18 +2,19 @@ MAP OF THE DUNGEON (SPOILER)
 
   1 2 3 4 5 6 7 8 9
 1 * * * * * * * * *
-2 * 0 . . * . . . . D -> exit
-3 * . * . . . * * *
-4 * . * * . . T * *
+2 * 0 . . * . x x . D -> exit
+3 * x * . . . * * *
+4 * x * * . . T * *
 5 * . T * T * * * *
-6 * . . . . D . S *
-7 * . * * * T * * *
-8 * L . . . . . K *
+6 * . . x . D x S *
+7 * x * * * T * * *
+8 * L x x x x x K *
 9 * * * * * * * * *
 
 NOTE: Tiles will be named XxY where X is the row, Y is the column, eg: 8x2 has the locked box
 
-. = road
+. = programmable road
+x = non programmable road; skip; no junctions or speical tiles here
 * = wall
 L = locked box
 K = key
