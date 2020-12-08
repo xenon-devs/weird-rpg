@@ -57,12 +57,43 @@ local junctionSituation(directions, nextQuestion) = {
       description: TILES.traps[2],
       nextQuestion: -1
     },
-    junctionSituation(['D', 'R', 'U'], 3) // Tile 6x2
+    junctionSituation(['D', 'R', 'U'], 3), // Tile 6x2
+    { // Tile 8x2; Locked box
+      title: "Mysterious Box",
+      description: "You found a mysterious, old box lying here.",
+      nextQuestion: 4
+    },
+    { // Box is locked
+      title: "Locked",
+      description: TILES.locked_box.locked,
+      nextQuestion: 4
+    },
   ],
   questions: [
     junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting tile); Down goes directly to 5x2
     junctionQuestion([directionOpt('D', 1), directionOpt('L', 2)]), // Tile 2x4;
-    junctionQuestion([directionOpt('D', 1), directionOpt('R', 5), directionOpt('U', 2)]), // Tile 5x2; Trap to the right
-    junctionQuestion([directionOpt('D', 1), directionOpt('R', 1), directionOpt('U', 1)]), // Tile 6x2
+    junctionQuestion([directionOpt('D', 6), directionOpt('R', 5), directionOpt('U', 2)]), // Tile 5x2; Trap to the right
+    junctionQuestion([directionOpt('D', 7), directionOpt('R', 1), directionOpt('U', 4)]), // Tile 6x2
+    { // Tile 8x2; Locked Box
+      question: "What will you do?",
+      options: [
+        directionOpt('R', 1),
+        directionOpt('U', 1),
+        {
+          opt: "Open the box",
+          nextSituation: 8,
+          conditionalNext: [
+            {
+              condition: {
+                variables: {
+                  hasKey: false
+                }
+              },
+              nextSituation: 8
+            },
+          ]
+        },
+      ],
+    },
   ]
 }
