@@ -1,12 +1,13 @@
 {
   wall: "There is a wall here.",
   locked_box: {
-    locked: "There is mysterious box here, but it is locked. Probably needs a rusty old key.",
+    locked: "The mysterious box is locked. Probably needs a rusty old key.",
     unlockable: "The mysterious box is locked. But the key in your inventory can be used to unlock it. Do you want to unlock the box?",
+    unlocked: "There is box here but you already unlocked it.",
     contents: |||
       The rusty old key fit the keyhole. Yes, the box opened.
-      Apart from years of dust and a few cobwebs, there is a mysterious looking heavy object of a specific shape and size inside.
-      You picked up the mysterious weight and put in your backpack.
+      Apart from years of dust and a few cobwebs, there is a mysterious looking, heavy object of a specific, rather peculiar shape and size inside.
+      You picked up the mysterious weight and put it in your backpack.
     |||
   },
   key: "There is a rusty key here. Do you want to pick it up?",

@@ -3,26 +3,15 @@ local CHARACTERS = {
 };
 
 local TILES = import './escape/tiles.jsonnet';
-local DIRECTIONS = import './escape/directions.jsonnet';
-local DIRECTIONS_GO = import './escape/directions-go.jsonnet';
+local LOCKED_BOX = import './escape/locked-box.jsonnet';
+local FUNCTIONS = import './escape/functions.libsonnet';
 
-local directionOpt(dir, nextSituation, conditionalNext = []) = {
-  opt: DIRECTIONS_GO[dir],
-  nextSituation: nextSituation,
-  conditionalNext: conditionalNext
-};
 
-local junctionQuestion(options) = {
-  question: "What will you do?",
-  options: options
-};
+local directionOpt = FUNCTIONS.directionOpt;
+local junctionQuestion = FUNCTIONS.junctionQuestion;
+local junctionSituation = FUNCTIONS.junctionSituation;
 
-local junctionSituation(directions, nextQuestion) = {
-  title: "Junction",
-  description: std.join('\n', ["%s" % DIRECTIONS[x], for x in directions]) + "\n All directions are shown assuming you are looking at the 2D map from above.",
-  nextQuestion: nextQuestion
-};
-
+// NOTE: Some question options redirect to -1, those are incomplete questions
 {
   name: "%s's Escape"%CHARACTERS.main,
   author: "ShadowWarriorPro",
@@ -59,58 +48,37 @@ local junctionSituation(directions, nextQuestion) = {
       nextQuestion: -1
     },
     junctionSituation(['D', 'R', 'U'], 3), // Tile 6x2
-    { // Tile 8x2; Locked box
-      title: "Mysterious Box",
-      description: "You found a mysterious, old box lying here.",
-      nextQuestion: 4
-    },
-    { // Box is locked
-      title: "Locked",
-      description: TILES.locked_box.locked,
-      nextQuestion: 4
-    },
-    { // Box is unlockable
-      title: "Box and Key?",
-      description: TILES.locked_box.unlockable,
-      nextQuestion: 5
-    },
+    LOCKED_BOX.situations[0],
+    LOCKED_BOX.situations[1],
+    LOCKED_BOX.situations[2],
+    LOCKED_BOX.situations[3],
+    LOCKED_BOX.situations[4]
   ],
   questions: [
     junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting tile); Down goes directly to 5x2
-    junctionQuestion([directionOpt('D', 1), directionOpt('L', 2)]), // Tile 2x4;
+    junctionQuestion([directionOpt('D', -1), directionOpt('L', 2)]), // Tile 2x4;
     junctionQuestion([directionOpt('D', 6), directionOpt('R', 5), directionOpt('U', 2)]), // Tile 5x2; Trap to the right
-    junctionQuestion([directionOpt('D', 7), directionOpt('R', 1), directionOpt('U', 4)]), // Tile 6x2
-    { // Tile 8x2; Locked Box
-      question: "What will you do?",
-      options: [
-        directionOpt('R', 1),
-        directionOpt('U', 6),
-        {
-          opt: "Open the box",
-          nextSituation: 8,
-          conditionalNext: [
+    junctionQuestion(
+      [
+        directionOpt(
+          'D', 7,
+          [
             {
-              condition: {variables: {hasKey: false}},
-              nextSituation: 8
+              condition: {variables: {hasMysteriousWeight: true}},
+              nextSituation: 10,
             },
             {
-              condition: {variables: {hasKey: true}},
-              nextSituation: 9
+              condition: {variables: {hasMysteriousWeight: false}},
+              nextSituation: 7,
             },
           ]
-        },
-      ],
-    },
-    { // Tile 8x2; Unlockable Box
-      question: "What will you do?",
-      options: [
-        directionOpt('R', 1),
-        directionOpt('U', 6),
-        {
-          opt: "Unlock the box",
-          nextSituation: 1
-        },
-      ],
-    },
+        ), // Should go to unlocked or locked box, so conditional
+        directionOpt('R', -1),
+        directionOpt('U', 4)
+      ]
+    ), // Tile 6x2
+    LOCKED_BOX.questions[0],
+    LOCKED_BOX.questions[1],
+    LOCKED_BOX.questions[2]
   ]
 }
