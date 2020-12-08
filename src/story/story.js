@@ -82,9 +82,14 @@ class Story {
 
     this.channel.send(`**${situation.title}** \n${situation.description}`);
 
-    if (situation.setVariables) {
+    // console.log(situation);
+    if (situation.setVariables !== undefined) {
       for (let variable in situation.setVariables) {
-        if (this.storyVariables[variable]) this.storyVariables[variable] = situation.setVariables[variable];
+        console.log(variable, this.storyVariables);
+        if (this.storyVariables[variable] !== undefined) {
+          console.log('setting', variable, situation.setVariables[variable])
+          this.storyVariables[variable] = situation.setVariables[variable];
+        }
       }
     }
 
@@ -126,13 +131,13 @@ class Story {
         if (ansNo <= question.options.length && ansNo > 0) {
           const selectedOption = question.options[ansNo - 1];
 
-          if (selectedOption.setVariables) {
+          if (selectedOption.setVariables !== undefined) {
             for (let variable in selectedOption.setVariables) {
-              if (this.storyVariables[variable]) this.storyVariables[variable] = selectedOption.setVariables[variable];
+              if (this.storyVariables[variable] !== undefined) {}this.storyVariables[variable] = selectedOption.setVariables[variable];
             }
           }
 
-          if (selectedOption.conditionalNext) {
+          if (selectedOption.conditionalNext !== undefined) {
             for (let conditional of selectedOption.conditionalNext) {
               let isConditionMet = true;
 
