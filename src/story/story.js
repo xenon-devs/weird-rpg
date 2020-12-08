@@ -82,12 +82,9 @@ class Story {
 
     this.channel.send(`**${situation.title}** \n${situation.description}`);
 
-    // console.log(situation);
     if (situation.setVariables !== undefined) {
       for (let variable in situation.setVariables) {
-        console.log(variable, this.storyVariables);
         if (this.storyVariables[variable] !== undefined) {
-          console.log('setting', variable, situation.setVariables[variable])
           this.storyVariables[variable] = situation.setVariables[variable];
         }
       }
