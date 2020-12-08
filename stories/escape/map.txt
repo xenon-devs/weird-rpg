@@ -13,10 +13,15 @@ MAP OF THE DUNGEON (SPOILER)
 
 NOTE: Tiles will be named XxY where X is the row, Y is the column, eg: 8x2 has the locked box
 
+Story:
+1) Door at 2x9 (exit) asks for a puzzle whose solution is in the scroll.
+2) Scroll is locked behind door at 6x6 which needs a mysterious weight to be put in the hole next to it.
+3) Mysterious weight is in the locked box. Key to the box is on 8x8. Key is close to the box to keep it simple.
+
 . = programmable road
 x = non programmable road; skip; no junctions or speical tiles here
 * = wall
-L = locked box
+L = locked box; contains a mysterious weight
 K = key
 S = scroll
 D = door
