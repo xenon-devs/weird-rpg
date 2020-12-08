@@ -29,6 +29,7 @@ local junctionSituation(directions, nextQuestion) = {
   description: "%s is stuck in a dark dungeon. He has to escape with limited food, a dying lamp and hidden clues with no map."%CHARACTERS.main,
   variables: { // Inventory
     hasKey: false,
+    hasMysteriousWeight: false,
     hasScroll: false
   },
   situations: [
@@ -68,6 +69,11 @@ local junctionSituation(directions, nextQuestion) = {
       description: TILES.locked_box.locked,
       nextQuestion: 4
     },
+    { // Box is unlockable
+      title: "Box and Key?",
+      description: TILES.locked_box.unlockable,
+      nextQuestion: 5
+    },
   ],
   questions: [
     junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting tile); Down goes directly to 5x2
@@ -78,20 +84,31 @@ local junctionSituation(directions, nextQuestion) = {
       question: "What will you do?",
       options: [
         directionOpt('R', 1),
-        directionOpt('U', 1),
+        directionOpt('U', 6),
         {
           opt: "Open the box",
           nextSituation: 8,
           conditionalNext: [
             {
-              condition: {
-                variables: {
-                  hasKey: false
-                }
-              },
+              condition: {variables: {hasKey: false}},
               nextSituation: 8
             },
+            {
+              condition: {variables: {hasKey: true}},
+              nextSituation: 9
+            },
           ]
+        },
+      ],
+    },
+    { // Tile 8x2; Unlockable Box
+      question: "What will you do?",
+      options: [
+        directionOpt('R', 1),
+        directionOpt('U', 6),
+        {
+          opt: "Unlock the box",
+          nextSituation: 1
         },
       ],
     },
