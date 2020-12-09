@@ -62,6 +62,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     KEY.situations[0], // Key available
     KEY.situations[1], // Key picked up
     KEY.situations[2], // Key already in backpack
+    junctionSituation(['R', 'U', 'L'], 9) // Tile 6x3; Trap above
   ],
   questions: [
     junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting tile); Down goes directly to 5x2
@@ -82,7 +83,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
             },
           ]
         ), // Should go to unlocked or locked box, so conditional
-        directionOpt('R', -1),
+        directionOpt('R', 17),
         directionOpt('U', 4)
       ]
     ), // Tile 6x2
@@ -121,5 +122,6 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       ]
     ), // Tile 8x6
     KEY.questions[0],
+    junctionQuestion([directionOpt('R', -1), directionOpt('U', 5), directionOpt('L', 6)])
   ]
 }
