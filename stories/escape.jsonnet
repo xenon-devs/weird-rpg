@@ -53,7 +53,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     LOCKED_BOX.situations[2],
     LOCKED_BOX.situations[3],
     LOCKED_BOX.situations[4],
-    junctionSituation(['R', 'U', 'L'], -1), // Tile 8x6; Trap above, key to the right
+    junctionSituation(['R', 'U', 'L'], 7), // Tile 8x6; Trap above, key to the right
     { // Tile 7x6; Trap
       title: "Trap",
       description: TILES.traps[0],

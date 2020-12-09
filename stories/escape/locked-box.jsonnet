@@ -70,6 +70,6 @@ local junctionSituation = FUNCTIONS.junctionSituation;
         },
       ],
     },
-    junctionQuestion([directionOpt('U', 6), directionOpt('R', -1)]) // Tile 8x2; Already unlocked box
+    junctionQuestion([directionOpt('U', 6), directionOpt('R', 12)]) // Tile 8x2; Already unlocked box
   ]
 }
