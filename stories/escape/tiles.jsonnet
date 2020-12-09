@@ -10,7 +10,11 @@
       You picked up the mysterious weight and put it in your backpack.
     |||
   },
-  key: "There is a rusty key here. Do you want to pick it up?",
+  key: {
+    lying: "There is a rusty key here. Do you want to pick it up?",
+    picked: "You picked up the rusty, old key. What could it possibly open? The door to heavens, the exit or something else?",
+    already_picked: "You already have the key in your backpack. Keys do not regenerate. Also, two copies of the same key do not open different locks."
+  },
   scroll: "A mysterious scroll is carefully hidden behind a small hole in the wall. Do you want to pick it up?",
   door: "There is a door here. It is locked, looks as though some kind of a puzzle might unlock it. Do you want to try the puzzle?",
   traps: [
