@@ -41,7 +41,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     { // Tile 8x2; Locked Box
       question: "What will you do?",
       options: [
-        directionOpt('R', -1),
+        directionOpt('R', 12),
         directionOpt('U', 6),
         {
           opt: "Open the box.",
@@ -62,7 +62,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     { // Tile 8x2; Unlockable Box
       question: "What will you do?",
       options: [
-        directionOpt('R', -1),
+        directionOpt('R', 12),
         directionOpt('U', 6),
         {
           opt: "Unlock the box.",
