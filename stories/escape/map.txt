@@ -18,6 +18,14 @@ Story:
 2) Scroll is locked behind door at 6x6 which needs a mysterious weight to be put in the hole next to it.
 3) Mysterious weight is in the locked box. Key to the box is on 8x8. Key is close to the box to keep it simple.
 
+Puzzle:
+1) The scroll has a set of 1kg, 2kg, 3kg, 9kg weights with it.
+2) The exit door has 4 holes spring platforms that can move.
+3) If you keep a weight on one of the platforms, it goes down by a definite length.
+4) The scroll will have the clue. The clue will lead to the first 4 digits of π(3.1415926....).
+5) The 4 weights to be kept are 3, 1, 4, 1.
+6) If those weights are kept in that order, the door opens.
+
 . = programmable road
 x = non programmable road; skip; no junctions or speical tiles here
 * = wall
