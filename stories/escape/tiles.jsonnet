@@ -1,5 +1,4 @@
 {
-  wall: "There is a wall here.",
   locked_box: {
     locked: "The mysterious box is locked. Probably needs a rusty old key.",
     unlockable: "The mysterious box is locked. Perhaps the key in your inventory can be used to unlock it. Do you want to try to unlock the box?",
@@ -15,10 +14,15 @@
     picked: "You picked up the rusty, old key. What could it possibly open? The door to heavens, the exit or something else?",
     already_picked: "You already have the key in your backpack. Keys do not regenerate. Also, two copies of the same key do not open different locks."
   },
+  traps: [
+    "You tried to walk, but the floor cracked and you fell into a pool of lava.",
+    "You walked into a booby trap. You stepped onto a loose tile and poisonous arrows were fired from each direction.",
+    "A large boulder fell on you and you were squished like a lemon."
+  ],
   scroll_room: {
     available: [
       |||
-        Apart from the horrible smell, the room has a box with what looks like measuring weights.
+        Apart from the horrible smell, the room has a box with what looks like cylindrical measuring weights.
         It has exactly 4 sets of 9 weights. Each weight has a number carved on it. 1, 2, 3....9
       |||,
       |||
@@ -27,11 +31,6 @@
       |||
     ]
   },
-  traps: [
-    "You tried to walk, but the floor cracked and you fell into a pool of lava.",
-    "You walked into a booby trap. You stepped onto a loose tile and poisonous arrows were fired from each direction.",
-    "A large boulder fell on you and you were squished like a lemon."
-  ],
   scroll_door: {
     locked: |||
       There is a locked door here. You tried to push or break it but that did not work.
@@ -52,5 +51,19 @@
         Perhaps the door opened. Yes, yes it definitely opened. It opened into a small, dark room with no lamps.
       |||
     ],
+    scroll_contents: [
+
+    ],
   },
+  exit_door: [
+    |||
+      There is a large door here. So heavy that it can't be moved even by a milimeter. There is no key hole :eyes:.
+      No visible lever either. Although there are 4 holes next to it. Each hole has what looks like a movable platform.
+    |||,
+    |||
+      The platforms sag down if they are pushed. They also have a groove for a cylindrical object. Could be weights.
+      Yes, weights would be able to push down the platforms. What if each one has to be pushed by a defined amount?
+      Would that be the way to open the door? How would you push the platforms and by how much?
+    |||
+  ],
 }
