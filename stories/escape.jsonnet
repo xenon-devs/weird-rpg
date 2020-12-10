@@ -40,7 +40,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       jumpTo: 2
     },
     junctionSituation(['D', 'R'], 0), // Tile 2x2 (starting tile)
-    junctionSituation(['D', 'L'], 1), // Tile 2x4
+    junctionSituation(['D', 'R', 'L'], 1), // Tile 3x5; trap below
     junctionSituation(['D', 'R', 'U'], 2), // Tile 5x2
     { // Tile 5x3; Trap
       title: "Trap",
@@ -62,11 +62,16 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     KEY.situations[0], // Key available
     KEY.situations[1], // Key picked up
     KEY.situations[2], // Key already in backpack
-    junctionSituation(['R', 'U', 'L'], 9) // Tile 6x3; Trap above
+    junctionSituation(['R', 'U', 'L'], 9), // Tile 6x3; Trap above
+    { // Tile 5x5; Trap
+      title: "Trap",
+      description: TILES.traps[1],
+      nextQuestion: -1
+    },
   ],
   questions: [
-    junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting tile); Down goes directly to 5x2
-    junctionQuestion([directionOpt('D', -1), directionOpt('L', 2)]), // Tile 2x4;
+    junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting ti  le); Down goes directly to 5x2
+    junctionQuestion([directionOpt('D', 18), directionOpt('R', -1), directionOpt('L', 2)]), // Tile 3x5; trap below; exit door to the right
     junctionQuestion([directionOpt('D', 6), directionOpt('R', 5), directionOpt('U', 2)]), // Tile 5x2; Trap to the right
     junctionQuestion(
       [
@@ -122,6 +127,6 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       ]
     ), // Tile 8x6
     KEY.questions[0],
-    junctionQuestion([directionOpt('R', -1), directionOpt('U', 5), directionOpt('L', 6)])
+    junctionQuestion([directionOpt('R', -1), directionOpt('U', 5), directionOpt('L', 6)]) // Tile 6x5; trap above
   ]
 }
