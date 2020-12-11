@@ -1,10 +1,10 @@
 {
   locked_box: {
-    locked: "The mysterious box is locked. Probably needs a rusty old key.",
-    unlockable: "The mysterious box is locked. Perhaps the key in your inventory can be used to unlock it. Do you want to try to unlock the box?",
-    unlocked: "There is box here but you already unlocked it.",
+    locked: "The mysterious chest is locked. Probably needs a rusty old key.",
+    unlockable: "The mysterious chest is locked. Perhaps the key in your inventory can be used to unlock it. Do you want to try to unlock the chest?",
+    unlocked: "There is chest here but you already unlocked it.",
     contents: |||
-      The rusty old key fit the keyhole. Yes, the box opened.
+      The rusty old key fit the keyhole. Yes, the chest opened.
       Apart from years of dust and a few cobwebs, there is a mysterious looking, heavy object of a specific, rather peculiar shape and size inside.
       You picked up the mysterious weight and put it in your backpack.
     |||
@@ -39,7 +39,7 @@
     |||,
     unlockable: |||
       There is a locked door here. There is also a peculiarly shaped hole next to it.
-      Maybe the weird weight you found in the locked box can fit in the hole. Would you like to try that?
+      Maybe the weird weight you found in the locked chest can fit in the hole. Would you like to try that?
     |||,
     unlocked: [
       |||
@@ -52,7 +52,34 @@
       |||
     ],
     scroll_contents: [
+      |||
+        The scroll is old and the ink on it is nearly faded. But form what is left, it looks like it is some kind of a puzzle.
+        It is written in the form of a poem.
+      |||,
+      |||
+        ```
+        It is not a monument,
+        nor is it a man;
+        yet it is more famous,
+        than both of them;
 
+        It is older than me,
+        and older than you;
+        because it was created,
+        when creation was created too;
+        ```
+      |||,
+      |||
+        The sea has an end,
+        and so does dawn;
+        but this thing my friend,
+        goes on and on and on;
+
+        It is just a number,
+        between nil and four it lies;
+        although they tried without slumber,
+        they could not write it precise;
+      |||
     ],
   },
   exit_door: [

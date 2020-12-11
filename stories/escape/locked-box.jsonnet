@@ -9,8 +9,8 @@ local junctionSituation = FUNCTIONS.junctionSituation;
 {
   situations: [
     { // Tile 8x2; Locked box
-      title: "Mysterious Box",
-      description: "You found a mysterious, old box lying here.",
+      title: "Mysterious Chest",
+      description: "You found a mysterious, old chest lying here.",
       nextQuestion: 4
     },
     { // Box is locked
@@ -19,12 +19,12 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       nextQuestion: 4
     },
     { // Box is unlockable
-      title: "Box and Key?",
+      title: "Chest and Key?",
       description: TILES.locked_box.unlockable,
       nextQuestion: 5
     },
     { // Box has already been unlocked
-      title: "Unlocked Box",
+      title: "Unlocked Chest",
       description: TILES.locked_box.unlocked,
       nextQuestion: 6
     },
@@ -44,7 +44,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
         directionOpt('R', 12),
         directionOpt('U', 6),
         {
-          opt: "Open the box.",
+          opt: "Open the chest.",
           nextSituation: 8,
           conditionalNext: [
             {
@@ -65,7 +65,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
         directionOpt('R', 12),
         directionOpt('U', 6),
         {
-          opt: "Unlock the box.",
+          opt: "Unlock the chest.",
           nextSituation: 11
         },
       ],
