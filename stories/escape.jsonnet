@@ -18,7 +18,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
 {
   name: "%s's Escape"%CHARACTERS.main,
   author: "ShadowWarriorPro",
-  description: "%s is stuck in a dark dungeon. He has to escape with limited food, a dying lamp and hidden clues with no map."%CHARACTERS.main,
+  description: "%s is stuck in a dark dungeon. He has to escape with limited food, a dying lamp and hidden clues with no map. Find keys, open doors, solve puzzles and avoid traps."%CHARACTERS.main,
   variables: { // Inventory
     hasKey: false,
     hasMysteriousWeight: false,
@@ -44,6 +44,8 @@ local junctionSituation = FUNCTIONS.junctionSituation;
         There are faint lamps everywhere with limited oil.
         You found food and water next to you, but very little. You picked up one of the lamps from its stand, packed the food in your bag, and started exploring
         with (very little) hope to survive. You don't have a map of the place. All corridors look alike and you have no idea which monsters are waiting to eat you up.
+
+        NOTE FOR PLAYER: You may not be able to escape in the first try. Use a pen and paper to remember where you went and the locations of the traps.
       |||,
       jumpTo: 2
     },
