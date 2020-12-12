@@ -8,6 +8,7 @@ local LOCKED_BOX = import './escape/locked-box.jsonnet';
 local KEY = import './escape/key.jsonnet';
 local SCROLL_DOOR = import './escape/scroll-door.jsonnet';
 local SCROLL_ROOM = import './escape/scroll-room.jsonnet';
+local EXIT_DOOR = import './escape/exit-door.jsonnet';
 
 local directionOpt = FUNCTIONS.directionOpt;
 local junctionQuestion = FUNCTIONS.junctionQuestion;
@@ -23,6 +24,10 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     hasMysteriousWeight: false,
     hasOpenedScrollDoor: false,
     hasScroll: false,
+    digit1: 0,
+    digit2: 0,
+    digit3: 0,
+    digit4: 0,
   },
   situations: [
     {
@@ -76,6 +81,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     SCROLL_DOOR.situations[1], // Unlockable
     SCROLL_DOOR.situations[2], // Unlocking procedure
     SCROLL_DOOR.situations[3], // Unlocking procedure
+
     SCROLL_ROOM.situations[0], // Scroll room; scroll available
     SCROLL_ROOM.situations[1], // Scroll room; scroll available; index 25
     SCROLL_ROOM.situations[2], // Scroll room; scroll unavailable
@@ -83,11 +89,55 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     SCROLL_ROOM.situations[4], // Scroll contents
     SCROLL_ROOM.situations[5], // Scroll contents
     SCROLL_ROOM.situations[6], // Scroll contents; index 30
-    SCROLL_ROOM.situations[7], // End of scroll reading; index 30
+    SCROLL_ROOM.situations[7], // End of scroll reading
+
+    EXIT_DOOR.situations[0], // Locked Door; Not unlockable
+    EXIT_DOOR.situations[1], // Locked Door; Not unlockable
+    EXIT_DOOR.situations[2], // Locked Door; Not unlockable
+    EXIT_DOOR.situations[3], // Locked Door; Unlockable; index 35
+    EXIT_DOOR.situations[4], // Locked Door; Unlockable
+    EXIT_DOOR.situations[5], // Locked Door; Unlockable
+    EXIT_DOOR.situations[6], // Scroll reading
+    EXIT_DOOR.situations[7], // Scroll reading
+    EXIT_DOOR.situations[8], // Scroll reading; index 40
+    EXIT_DOOR.situations[9], // Scroll reading
+    EXIT_DOOR.situations[10], // Digit 1
+    EXIT_DOOR.situations[11], // Digit 2
+    EXIT_DOOR.situations[12], // Digit 3
+    EXIT_DOOR.situations[13], // Digit 4; index 45
+    EXIT_DOOR.situations[14], // Code did not work
+
+    { // Final exit situation.
+      title: "Exit?",
+      description: |||
+        There was a sudden screech. As if rusty mechanical parts are rubbing against each other. There were loud clanks and thuds.
+        Yes, the door started sliding. It is slowly opening. There are tears in %s's eyes. He is thinking of good freedom.
+        Freedom in every which way, good food, a roof, a life!
+      ||| % CHARACTERS.main,
+      jumpTo: 48
+    },
+    {
+      title: "An Exit To...",
+      description: |||
+        The door was quite wide open now. But wait, there is no light coming through it.
+        Is it night outside? Where even is %s?
+        Wait, what? That can't be... Noooooooooooooooooooooooooooooooooooo!
+      ||| % CHARACTERS.main,
+      nextQuestion: -1
+    },
   ],
   questions: [
     junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting ti  le); Down goes directly to 5x2
-    junctionQuestion([directionOpt('D', 18), directionOpt('R', -1), directionOpt('L', 2)]), // Tile 3x5; trap below; exit door to the right
+    junctionQuestion(
+      [
+        directionOpt('D', 18),
+        directionOpt('R', 32, [
+          {condition: {variables: {hasScroll: true}}, nextSituation: 35},
+          {condition: {variables: {hasScroll: false}}, nextSituation: 32},
+        ]),
+        directionOpt('L', 2)
+      ]
+    ), // Tile 3x5; trap below; exit door to the right
     junctionQuestion([directionOpt('D', 6), directionOpt('R', 5), directionOpt('U', 2)]), // Tile 5x2; Trap to the right
     junctionQuestion(
       [
@@ -138,6 +188,12 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       ]
     ),
     SCROLL_DOOR.questions[0],
-    SCROLL_ROOM.questions[0]
+    SCROLL_ROOM.questions[0],
+
+    EXIT_DOOR.questions[0], // Options
+    EXIT_DOOR.questions[1], // Digit 1
+    EXIT_DOOR.questions[2], // Digit 2; index 15
+    EXIT_DOOR.questions[3], // Digit 3
+    EXIT_DOOR.questions[4], // Digit 4
   ]
 }
