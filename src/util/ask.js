@@ -1,4 +1,4 @@
-const timeLimit = 60000; // 60s
+const timeLimit = 5 * 60000; // 5 * 60s
 
 /**
  * @description Ask a question to a specific discord user and wait for the answer in a specific channel.
@@ -26,7 +26,7 @@ function ask(
   const finalAnswerHandler = (msg, timeout) => {
     if (msg.author.id === askTo.id && msg.channel.id === channel.id) {
       const answer = msg.content;
-      
+
       clearTimeout(timeout);
       client.offMsg(`${question}@${askTo.id}#${channel.id}`);
       onAnswerCb(answer, msg);
