@@ -60,25 +60,53 @@
         ```
         It is not a monument,
         nor is it a man;
-        yet it is more famous,
+        Yet it is more famous,
         than both of them;
 
         It is older than me,
         and older than you;
-        because it was created,
+        Because it was created,
         when creation was created too;
         ```
       |||,
       |||
+        ```
         The sea has an end,
         and so does dawn;
-        but this thing my friend,
+        But this thing my friend,
         goes on and on and on;
 
         It is just a number,
         between nil and four it lies;
-        although they tried without slumber,
+        Although many tried without slumber,
         they could not write it precise;
+        ```
+      |||,
+      |||
+        ```
+        So famous that it has a name,
+        and that rhymes with a sweet;
+        It has got something to do,
+        with the shape of the sweet it rhymes;
+
+        Multiply the number,
+        with the value of thousand;
+        After the dot, delete all numbers,
+        sequence of 4 numbers will be in your hand;
+        ```
+      |||,
+      |||
+        ```
+        For each number,
+        pick up a weight;
+        Place all of them,
+        at the exit gate;
+
+        This special number,
+        will end your problems;
+        And lead you to freedom,
+        if you solve this problem;
+        ```
       |||
     ],
   },
