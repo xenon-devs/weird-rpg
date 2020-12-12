@@ -6,8 +6,8 @@ local FUNCTIONS = import './escape/functions.libsonnet';
 local TILES = import './escape/tiles.jsonnet';
 local LOCKED_BOX = import './escape/locked-box.jsonnet';
 local KEY = import './escape/key.jsonnet';
-local SCROLL_DOOR = import './escape/scroll_door.jsonnet';
-local SCROLL_ROOM = import './escape/scroll_room.jsonnet';
+local SCROLL_DOOR = import './escape/scroll-door.jsonnet';
+local SCROLL_ROOM = import './escape/scroll-room.jsonnet';
 
 local directionOpt = FUNCTIONS.directionOpt;
 local junctionQuestion = FUNCTIONS.junctionQuestion;
