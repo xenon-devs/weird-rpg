@@ -7,6 +7,7 @@ local TILES = import './escape/tiles.jsonnet';
 local LOCKED_BOX = import './escape/locked-box.jsonnet';
 local KEY = import './escape/key.jsonnet';
 local SCROLL_DOOR = import './escape/scroll_door.jsonnet';
+local SCROLL_ROOM = import './escape/scroll_room.jsonnet';
 
 local directionOpt = FUNCTIONS.directionOpt;
 local junctionQuestion = FUNCTIONS.junctionQuestion;
@@ -20,7 +21,8 @@ local junctionSituation = FUNCTIONS.junctionSituation;
   variables: { // Inventory
     hasKey: false,
     hasMysteriousWeight: false,
-    hasScroll: false
+    hasOpenedScrollDoor: false,
+    hasScroll: false,
   },
   situations: [
     {
@@ -74,6 +76,14 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     SCROLL_DOOR.situations[1], // Unlockable
     SCROLL_DOOR.situations[2], // Unlocking procedure
     SCROLL_DOOR.situations[3], // Unlocking procedure
+    SCROLL_ROOM.situations[0], // Scroll room; scroll available
+    SCROLL_ROOM.situations[1], // Scroll room; scroll available; index 25
+    SCROLL_ROOM.situations[2], // Scroll room; scroll unavailable
+    SCROLL_ROOM.situations[3], // Scroll contents
+    SCROLL_ROOM.situations[4], // Scroll contents
+    SCROLL_ROOM.situations[5], // Scroll contents
+    SCROLL_ROOM.situations[6], // Scroll contents; index 30
+    SCROLL_ROOM.situations[7], // End of scroll reading; index 30
   ],
   questions: [
     junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting ti  le); Down goes directly to 5x2
@@ -84,14 +94,8 @@ local junctionSituation = FUNCTIONS.junctionSituation;
         directionOpt(
           'D', 7,
           [
-            {
-              condition: {variables: {hasMysteriousWeight: true}},
-              nextSituation: 10,
-            },
-            {
-              condition: {variables: {hasMysteriousWeight: false}},
-              nextSituation: 7,
-            },
+            {condition: {variables: {hasMysteriousWeight: true}}, nextSituation: 10},
+            {condition: {variables: {hasMysteriousWeight: false}}, nextSituation: 7},
           ]
         ), // Should go to unlocked or locked box, so conditional
         directionOpt('R', 17),
@@ -106,28 +110,16 @@ local junctionSituation = FUNCTIONS.junctionSituation;
         directionOpt(
           'R', 14,
           [
-            {
-              condition: {variables: {hasKey: false}},
-              nextSituation: 14,
-            },
-            {
-              condition: {variables: {hasKey: true}},
-              nextSituation: 16,
-            },
+            {condition: {variables: {hasKey: false}}, nextSituation: 14},
+            {condition: {variables: {hasKey: true}}, nextSituation: 16},
           ],
         ),
         directionOpt('U', 13),
         directionOpt(
           'L', 7,
           [
-            {
-              condition: {variables: {hasMysteriousWeight: true}},
-              nextSituation: 10,
-            },
-            {
-              condition: {variables: {hasMysteriousWeight: false}},
-              nextSituation: 7,
-            },
+            {condition: {variables: {hasMysteriousWeight: true}}, nextSituation: 10},
+            {condition: {variables: {hasMysteriousWeight: false}}, nextSituation: 7},
           ]
         ) // Should go to unlocked or locked box, so conditional
       ]
@@ -137,6 +129,8 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     junctionQuestion(  // Tile 6x5; trap above; index 10
       [
         directionOpt('R', 20, [
+          {condition: {variables: {hasOpenedScrollDoor: true, hasScroll: true}}, nextSituation: 26},
+          {condition: {variables: {hasOpenedScrollDoor: true, hasScroll: false}}, nextSituation: 24},
           {condition: {variables: {hasMysteriousWeight: true}}, nextSituation: 21},
           {condition: {variables: {hasMysteriousWeight: false}}, nextSituation: 20},
         ]),
@@ -144,5 +138,6 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       ]
     ),
     SCROLL_DOOR.questions[0],
+    SCROLL_ROOM.questions[0]
   ]
 }

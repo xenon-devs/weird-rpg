@@ -20,7 +20,7 @@ local TILES = import './tiles.jsonnet';
     { // Unlocking procedure
       title: "Weird Unlock",
       description: TILES.scroll_door.unlocked[1],
-      nextQuestion: -1
+      jumpTo: 24
     },
   ],
   questions: [
@@ -29,6 +29,9 @@ local TILES = import './tiles.jsonnet';
       options: [
         {
           opt: "Put the object in the hole.",
+          setVariables: {
+            hasOpenedScrollDoor: true
+          },
           nextSituation: 22,
         },
         {

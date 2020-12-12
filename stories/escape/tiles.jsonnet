@@ -29,29 +29,11 @@
         A mysterious scroll is carefully hidden behind a small hole in the wall. What could the scroll have on it?
         Why the weights? What kind of a mystery is this? Do you want to pick up these things?
       |||
-    ]
-  },
-  scroll_door: {
-    locked: |||
-      There is a locked door here. You tried to push or break it but that did not work.
-      There is a partially hidden with cobwebs, pecuiarly shaped hole next to it.
-      What could it be for? What could go in there? Can it be used to open the door?
-      You went back.
-    |||,
-    unlockable: |||
-      There is a locked door here. There is also a peculiarly shaped hole next to it.
-      Maybe the weird weight you found in the locked chest can fit in the hole. Would you like to try that?
-    |||,
-    unlocked: [
-      |||
-        You put the weirdly shaped weight inside the hole. It fit perfectly. Suddenly there were cranks and thuds.
-        It seems as if the weight moved some sort of an ancient lever or some other kind of machinery.
-      |||,
-      |||
-        After a few seconds of weird noises, there was a sharp click.
-        Perhaps the door opened. Yes, yes it definitely opened. It opened into a small, dark room with no lamps.
-      |||
     ],
+    unavailable: |||
+      This is the same horrible, dark room you had come to before. You already picked up the important stuff.
+      You went back before ghosts appeared.
+    |||,
     scroll_contents: [
       |||
         The scroll is old and the ink on it is nearly faded. But form what is left, it looks like it is some kind of a puzzle.
@@ -108,6 +90,28 @@
         And lead you to freedom,
         if you solve this problem;
         ```
+      |||
+    ],
+  },
+  scroll_door: {
+    locked: |||
+      There is a locked door here. You tried to push or break it but that did not work.
+      There is a partially hidden with cobwebs, pecuiarly shaped hole next to it.
+      What could it be for? What could go in there? Can it be used to open the door?
+      You went back.
+    |||,
+    unlockable: |||
+      There is a locked door here. There is also a peculiarly shaped hole next to it.
+      Maybe the weird weight you found in the locked chest can fit in the hole. Would you like to try that?
+    |||,
+    unlocked: [
+      |||
+        You put the weirdly shaped weight inside the hole. It fit perfectly. Suddenly there were cranks and thuds.
+        It seems as if the weight moved some sort of an ancient lever or some other kind of machinery.
+      |||,
+      |||
+        After a few seconds of weird noises, there was a sharp click.
+        Perhaps the door opened. Yes, yes it definitely opened. It opened into a small, dark room with no lamps.
       |||
     ],
   },
