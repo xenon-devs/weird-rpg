@@ -36,7 +36,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
           nextSituation: 15
         },
         {
-          opt: "Go back left.",
+          opt: "Go back west.",
           nextSituation: 12
         },
       ]

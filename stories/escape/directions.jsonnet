@@ -1,6 +1,6 @@
 {
-  L: "There is a passage to the left.",
-  R: "There is a passage to the right.",
-  U: "There is a passage going up.",
-  D: "There is a passage going down."
+  L: "There is a passage to the west.",
+  R: "There is a passage to the east.",
+  U: "There is a passage going north.",
+  D: "There is a passage going douth."
 }
