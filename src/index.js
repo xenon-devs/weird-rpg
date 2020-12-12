@@ -13,8 +13,8 @@ const helpEmbed = new MessageEmbed()
 	.setDescription('Time to dive back in Text mode and enjoy the weirdest ever RPG game')
 	.setThumbnail('https://imgur.com/dQd2ziB.png')
 	.addFields(
-    { name: '*start', value: 'Starts the game'},
-    { name: '*help', value:'Shows this message'},
+    { name: `${prefix}start`, value: 'Starts the game'},
+    { name: `${prefix}help`, value:'Shows this message'},
     { name: 'Support Server', value: '[Discord](https://discord.gg/4NZqsUs)', inline: true },
     { name: 'Vote and Invite', value: '[Top.gg](https://top.gg/bot/725722531918774284)', inline: true },
     { name: 'GitHub', value: '[/Weird-Life](https://github.com/xenon-devs/weird-rpg)', inline: true },
