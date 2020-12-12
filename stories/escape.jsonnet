@@ -6,6 +6,7 @@ local FUNCTIONS = import './escape/functions.libsonnet';
 local TILES = import './escape/tiles.jsonnet';
 local LOCKED_BOX = import './escape/locked-box.jsonnet';
 local KEY = import './escape/key.jsonnet';
+local SCROLL_DOOR = import './escape/scroll_door.jsonnet';
 
 local directionOpt = FUNCTIONS.directionOpt;
 local junctionQuestion = FUNCTIONS.junctionQuestion;
@@ -42,7 +43,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     junctionSituation(['D', 'R'], 0), // Tile 2x2 (starting tile)
     junctionSituation(['D', 'R', 'L'], 1), // Tile 3x5; trap below
     junctionSituation(['D', 'R', 'U'], 2), // Tile 5x2
-    { // Tile 5x3; Trap
+    { // Tile 5x3; Trap; index 5
       title: "Trap",
       description: TILES.traps[2],
       nextQuestion: -1
@@ -51,7 +52,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
     LOCKED_BOX.situations[0], // Tile 8x2; Locked box
     LOCKED_BOX.situations[1], // Box is locked
     LOCKED_BOX.situations[2], // Box is unlockable
-    LOCKED_BOX.situations[3], // Box has already been unlocked
+    LOCKED_BOX.situations[3], // Box has already been unlocked; index 10
     LOCKED_BOX.situations[4], // Box unlocking
     junctionSituation(['R', 'U', 'L'], 7), // Tile 8x6; Trap above, key to the right
     { // Tile 7x6; Trap
@@ -60,7 +61,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       nextQuestion: -1
     },
     KEY.situations[0], // Key available
-    KEY.situations[1], // Key picked up
+    KEY.situations[1], // Key picked up; index 15
     KEY.situations[2], // Key already in backpack
     junctionSituation(['R', 'U', 'L'], 9), // Tile 6x3; Trap above
     { // Tile 5x5; Trap
@@ -68,6 +69,11 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       description: TILES.traps[1],
       nextQuestion: -1
     },
+    junctionSituation(['R', 'U', 'L'], 10), // Tile 6x5; trap above
+    SCROLL_DOOR.situations[0], // Door locked; index 20
+    SCROLL_DOOR.situations[1], // Unlockable
+    SCROLL_DOOR.situations[2], // Unlocking procedure
+    SCROLL_DOOR.situations[3], // Unlocking procedure
   ],
   questions: [
     junctionQuestion([directionOpt('D', 4), directionOpt('R', 3)]), // Tile 2x2 (starting ti  le); Down goes directly to 5x2
@@ -93,7 +99,7 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       ]
     ), // Tile 6x2
     LOCKED_BOX.questions[0], // Tile 8x2; Locked Box
-    LOCKED_BOX.questions[1], // Tile 8x2; Unlockable Box
+    LOCKED_BOX.questions[1], // Tile 8x2; Unlockable Box; index 5
     LOCKED_BOX.questions[2], // Tile 8x2; Already unlocked box
     junctionQuestion(
       [
@@ -127,6 +133,16 @@ local junctionSituation = FUNCTIONS.junctionSituation;
       ]
     ), // Tile 8x6
     KEY.questions[0],
-    junctionQuestion([directionOpt('R', -1), directionOpt('U', 5), directionOpt('L', 6)]) // Tile 6x5; trap above
+    junctionQuestion([directionOpt('R', 19), directionOpt('U', 5), directionOpt('L', 6)]), // Tile 6x3; trap above
+    junctionQuestion(  // Tile 6x5; trap above; index 10
+      [
+        directionOpt('R', 20, [
+          {condition: {variables: {hasMysteriousWeight: true}}, nextSituation: 21},
+          {condition: {variables: {hasMysteriousWeight: false}}, nextSituation: 20},
+        ]),
+        directionOpt('U', 18), directionOpt('L', 17)
+      ]
+    ),
+    SCROLL_DOOR.questions[0],
   ]
 }

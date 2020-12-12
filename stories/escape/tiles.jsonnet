@@ -36,6 +36,7 @@
       There is a locked door here. You tried to push or break it but that did not work.
       There is a partially hidden with cobwebs, pecuiarly shaped hole next to it.
       What could it be for? What could go in there? Can it be used to open the door?
+      You went back.
     |||,
     unlockable: |||
       There is a locked door here. There is also a peculiarly shaped hole next to it.
