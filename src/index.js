@@ -15,10 +15,10 @@ const helpEmbed = new MessageEmbed()
 	.addFields(
     { name: `${prefix}start`, value: 'Starts the game'},
     { name: `${prefix}help`, value:'Shows this message'},
-    { name: 'Support Server', value: '[Discord](https://discord.gg/4NZqsUs)', inline: true },
-    { name: 'Vote and Invite', value: '[Top.gg](https://top.gg/bot/725722531918774284)', inline: true },
-    { name: 'GitHub', value: '[/Weird-Life](https://github.com/xenon-devs/weird-rpg)', inline: true },
-		{ name: 'Submit Story', value: '[Walkthrough](https://github.com/xenon-devs/weird-rpg/wiki/Getting-Started)', inline: true },
+    { name: 'Support Server', value: '[Click to Join](https://discord.gg/4NZqsUs)', inline: true },
+    { name: 'Vote and Invite', value: '[Click Here](https://top.gg/bot/725722531918774284)', inline: true },
+    { name: 'It\'s Open Source!', value: '[GitHub Link](https://github.com/xenon-devs/weird-rpg)', inline: true },
+		{ name: 'Want to Write a Story?', value: '[Click Here](https://github.com/xenon-devs/weird-rpg/wiki/Getting-Started)', inline: true },
   )
   .setFooter(`v${version} | By Team Xenon`, 'https://raw.githubusercontent.com/xenon-devs/xen-assets/main/xen-inc/logo/xen-logo-black-bg.png');
 
