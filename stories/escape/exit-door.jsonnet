@@ -16,7 +16,7 @@ local digitQuestion = FUNCTIONS.digitQuestion;
       jumpTo: 34
     },
     { // Locked Door; Not unlockable
-      title: "Now Way to Open the Door",
+      title: "No Way to Open the Door",
       description: |||
         You had no idea what to do. The door cannot be opened with what you already have.
         You went back to find more clues.

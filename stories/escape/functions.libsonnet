@@ -21,7 +21,6 @@ local junctionSituation(directions, nextQuestion) = {
 local digitQuestion(digit, nextSituation, conditionalNext = []) = {
   question: "Which weight will you place?",
   options: [
-    {opt: "Place no weight.", nextSituation: nextSituation, conditionalNext: conditionalNext, setVariables: {['digit' + digit]: 0}},
     {opt: "Place weight 1.", nextSituation: nextSituation, conditionalNext: conditionalNext, setVariables: {['digit' + digit]: 1}},
     {opt: "Place weight 2.", nextSituation: nextSituation, conditionalNext: conditionalNext, setVariables: {['digit' + digit]: 2}},
     {opt: "Place weight 3.", nextSituation: nextSituation, conditionalNext: conditionalNext, setVariables: {['digit' + digit]: 3}},
@@ -31,6 +30,7 @@ local digitQuestion(digit, nextSituation, conditionalNext = []) = {
     {opt: "Place weight 7.", nextSituation: nextSituation, conditionalNext: conditionalNext, setVariables: {['digit' + digit]: 7}},
     {opt: "Place weight 8.", nextSituation: nextSituation, conditionalNext: conditionalNext, setVariables: {['digit' + digit]: 8}},
     {opt: "Place weight 9.", nextSituation: nextSituation, conditionalNext: conditionalNext, setVariables: {['digit' + digit]: 9}},
+    {opt: "Place no weight.", nextSituation: nextSituation, conditionalNext: conditionalNext, setVariables: {['digit' + digit]: 0}},
   ],
 };
 
